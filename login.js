@@ -6,6 +6,7 @@ function login() {
   // Check if entered credentials are correct
   if (email === "abc@gmail.com" && password === "12345") {
     // Redirect user based on userType
+    //hello
     switch (userType) {
       case "courier":
         window.location.href = "courier_dashboard.html";
