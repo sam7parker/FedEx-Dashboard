@@ -1,0 +1,19 @@
+/* courier_dashboard.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .background-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 90%;
+    height: 90vh;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  
