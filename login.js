@@ -9,7 +9,7 @@ function login() {
     //hello
     switch (userType) {
       case "courier":
-        window.location.href = "courier_dashboard.html";
+        window.location.href = "CourierFiles/courier_dashboard.html";
         break;
       case "manager":
         window.location.href = "manager_dashboard.html";
