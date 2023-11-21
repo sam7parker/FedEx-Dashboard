@@ -2,9 +2,9 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-  }
-  
-  .background-box {
+}
+
+.background-box {
     background-color: #f0f0f0;
     padding: 20px;
     box-sizing: border-box;
@@ -14,6 +14,40 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     position: relative;
-  }
-  
-  
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the start (left) of the container */
+}
+
+.background-box img {
+    width: 20vw; /* 20% of the viewport width */
+    max-width: 150px; /* Set a maximum width to ensure it doesn't get too small */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any default inline spacing */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.route_num,
+.stops_packages_pickup_details {
+    width: 15vw;
+    height: 5vh;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 1.5px solid #000;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left; /* Align the text to the left */
+    font-size: 1vw;
+    margin: 15px;
+}
+
+.route_num {
+    width: 20vw;
+    font-size: 2vw;
+    text-align: left; /* Align the text to the left */
+}
