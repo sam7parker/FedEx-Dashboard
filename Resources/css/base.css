@@ -3,6 +3,7 @@
 :root {
     --purple: #7A0BD1;
     --orange: #ff7A08;
+    --grey: #EAEDF2;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     margin: 0px;
     font-size: 20px;
     font-family: 'Futura';
+    background-color: var(--grey);
 }
 
 a {
@@ -19,6 +21,10 @@ a {
 button {
     background: none;
     border: none;
+}
+
+section {
+    z-index: -2;
 }
 
 .icon-16 {
