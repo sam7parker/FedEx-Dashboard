@@ -12,6 +12,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/home.css">
+
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
@@ -20,29 +22,40 @@
         <![endif]-->
 
     <header>
+        <!--Hamburger Menu Open Icon-->
+        <button id="hamburger-input" onclick="HamburgerMenu()">
+            <i class="icon-48 icon-white" data-feather="menu"></i>
+        </button>
+
         <!--Hamburger Menu-->
-        <input type="checkbox" id="hamburger-input" class="burger-shower" />
-        <label id="hamburger-menu" for="hamburger-input">
-            <nav id="sidebar-menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Statistics</a></li>
-                    <li><a href="#">Alerts</a></li>
-                    <li><a href="#">Settings</a></li>
-                </ul>
-            </nav>
-        </label>
+        <nav id="hamburger-menu">
+            <!--Hamburger Menu Exit Icon-->
+            <button id="hamburger-input" onclick="HamburgerMenu()">
+                <i class="icon-48 icon-white" data-feather="x"></i>
+            </button>
 
-        <img id="logo" src="../Resources/images/FedEx-logo.svg" />
+            <!--Navigation Links-->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Statistics</a></li>
+                <li><a href="#">Alerts</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
 
-        <input id="profile-pic" type="image" src="../Resources/images/profile.svg" />
+        <img id="logo" name="fedex-logo" src="../Resources/images/FedEx-logo.svg" />
 
-        <div class="overlay"></div>
+        <i class="icon-32 icon-white" name="profile-icon" data-feather="user"></i>
+
+        <div class="overlay" id="overlay"></div>
     </header>
 
     <main>
+        <section>
+
+        </section>
 
     </main>
 
@@ -50,6 +63,11 @@
 
     </footer>
 
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="../Resources/scripts/base.js" async defer></script>
     <script src="index.js" async defer></script>
 </body>
 
