@@ -1,2 +1,12 @@
 @import "../../Resources/css/navbar.css";
 @import "../../Resources/css/widget.css";
+
+#alerts-widget #alert {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+#alerts-widget #alert #alert-entry-icon {
+    color: red;
+}
