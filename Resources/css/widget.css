@@ -1,0 +1,62 @@
+@import "base.css";
+
+
+#title {
+    margin-top: 5rem;
+    display:flex;
+    width:45rem;    
+}
+
+
+#entry-alert {
+    background-color:gainsboro;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    width: 45rem;
+    height: 10rem;
+}
+
+#entry-summary {
+    background-color:gainsboro;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    width: 45rem;
+    height: 20rem;
+}
+
+
+#entry-alert h1 {
+    margin-left: 2rem;
+    display: flex;
+}
+
+#entry-summary h1 {
+    margin-left: 2rem;
+    display: flex;
+    margin-bottom: 0rem;
+}
+
+
+
+#widget {
+    row-gap: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#banner {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
