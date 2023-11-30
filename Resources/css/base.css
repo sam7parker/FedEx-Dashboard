@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+:root {
+    --purple: #7A0BD1;
+    --orange: #ff7A08;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-family: 'Futura';
+}
+
+a {
+    text-decoration: none;
+}
