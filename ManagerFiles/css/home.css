@@ -10,3 +10,28 @@
 #alerts-widget #alert #alert-entry-icon {
     color: red;
 }
+
+#time-dropdown {
+    margin-top: 0.5rem;
+}
+
+.summary-text {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+#location-widget-content #revenue #percent-change {
+    color: var(--percent-green)
+}
+
+#location-widget-content #packages-delivered #percent-change {
+    color: var(--percent-red)
+}
+
+#location-widget-content #route-compliance #percent-change {
+    color: var(--percent-green)
+}
+
+#location-widget-content #scan-compliance #percent-change {
+    color: var(--percent-green)
+}

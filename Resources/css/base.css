@@ -4,6 +4,8 @@
     --purple: #7A0BD1;
     --orange: #ff7A08;
     --grey: #EAEDF2;
+    --percent-green: #3AA738;
+    --percent-red: #ED2020;
     --widget-radius: 10px;
     --widget-padding: 0.5rem;
     --widget-font-size: 14px;
@@ -34,9 +36,17 @@ button {
     border: none;
 }
 
+select {
+    border: none;
+    border-radius: var(--widget-radius);
+    padding: var(--widget-padding);
+}
+
+/*
 section {
     z-index: -2;
 }
+*/
 
 .icon-14 {
     width: 14px;

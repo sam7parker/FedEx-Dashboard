@@ -53,25 +53,60 @@
     </header>
 
     <main>
+        <!--Alerts Widget-->
         <section class="widget" id="alerts-widget">
+            <!--Widget Header-->
             <div class="widget-header">
                 <h1>Alerts</h1>
                 <i class="icon-32" name="alerts-icon" data-feather="bell"></i>
             </div>
 
+            <!--Widget Content-->
             <div class="widget-entry" id="alert">
                 <i class="icon-24" id="alert-entry-icon" data-feather="alert-triangle"></i>
                 <p>Truck Breakdown: Driver Brian Jones (9447)</p>
             </div>
         </section>
 
-        <h1>Region Summary</h1>
-        <section name="Region-Summary">
-            <div>
-                <h1>Revenue:</h1>
-                <h1>Packages Delivered:</h1>
-                <h1>Route Compliance:</h1>
-                <h1>Scan Compliance:</h1>
+        <!--Location Summary-->
+        <section class="widget" id="location-widget">
+            <!--Widget Header-->
+            <div class="widget-header">
+                <h1>OWDA Summary</h1>
+
+                <select id="time-dropdown">
+                    <option value="Yearly">Yearly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Weekly" selected>Weekly</option>
+                    <option value="Daily">Daily</option>
+                </select>
+            </div>
+
+            <!--Widget Content-->
+            <div class="widget-entry" id="location-widget-content">
+                <!--Revenue-->
+                <span class="summary-text" id="revenue">
+                    <h3>Revenue: $1,490,045</h3>
+                    <h3 id="percent-change">(+1%)</h3>
+                </span>
+
+                <!--Packages Delivered-->
+                <span class="summary-text" id="packages-delivered">
+                    <h3>Packages Delivered: 500</h3>
+                    <h3 id="percent-change">(-3%)</h3>
+                </span>
+
+                <!--Route Compliance-->
+                <span class="summary-text" id="route-compliance">
+                    <h3>Route Compliance: 80%</h3>
+                    <h3 id="percent-change">(+5%)</h3>
+                </span>
+
+                <!--Scan Compliance-->
+                <span class="summary-text" id="scan-compliance">
+                    <h3>Scan Compliance: 85%</h3>
+                    <h3 id="percent-change">(+2%)</h3>
+                </span>
             </div>
         </section>
     </main>
