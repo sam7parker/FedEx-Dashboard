@@ -1,0 +1,22 @@
+@import "base.css";
+
+.widget {
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.widget-entry {
+    background-color: white;
+    border-radius: var(--widget-radius);
+    padding: var(--widget-padding);
+    font-size: var(--widget-font-size);
+    width: 80vw;
+    margin-bottom: 0rem;
+}

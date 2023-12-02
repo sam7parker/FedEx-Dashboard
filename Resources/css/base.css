@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+:root {
+    --purple: #7A0BD1;
+    --orange: #ff7A08;
+    --grey: #EAEDF2;
+    --percent-green: #3AA738;
+    --percent-red: #ED2020;
+    --widget-radius: 10px;
+    --widget-padding: 0.5rem;
+    --widget-font-size: 14px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-family: 'Futura';
+    background-color: var(--grey);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+select {
+    border: none;
+    border-radius: var(--widget-radius);
+    padding: var(--widget-padding);
+}
+
+/*
+section {
+    z-index: -2;
+}
+*/
+
+.icon-14 {
+    width: 14px;
+    height: 14px;
+}
+
+.icon-16 {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-24 {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-32 {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-48 {
+    width: 48px;
+    height: 48px;
+}
+
+.icon-white {
+    color: white;
+}

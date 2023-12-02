@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FedEx- Manager Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" type="image/x-icon" href="/Resources/images/FedEx_favicon.png">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header>
+        <!--Hamburger Menu Open Icon-->
+        <button id="hamburger-input" onclick="HamburgerMenu()">
+            <i class="icon-48 icon-white" data-feather="menu"></i>
+        </button>
+
+        <!--Hamburger Menu-->
+        <nav id="hamburger-menu">
+            <!--Hamburger Menu Exit Icon-->
+            <button id="hamburger-input" onclick="HamburgerMenu()">
+                <i class="icon-48 icon-white" data-feather="x"></i>
+            </button>
+
+            <!--Navigation Links-->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Statistics</a></li>
+                <li><a href="#">Alerts</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+
+        <img id="logo" name="fedex-logo" src="../Resources/images/FedEx-logo.svg" />
+
+        <i class="icon-32 icon-white" name="profile-icon" data-feather="user"></i>
+
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+        <!--Alerts Widget-->
+        <section class="widget" id="alerts-widget">
+            <!--Widget Header-->
+            <div class="widget-header">
+                <h1>Alerts</h1>
+                <i class="icon-32" name="alerts-icon" data-feather="bell"></i>
+            </div>
+
+            <!--Widget Content-->
+            <div class="widget-entry" id="alert">
+                <i class="icon-24" id="alert-entry-icon" data-feather="alert-triangle"></i>
+                <p>Truck Breakdown: Driver Brian Jones (9447)</p>
+            </div>
+        </section>
+
+        <!--Location Summary-->
+        <section class="widget" id="location-widget">
+            <!--Widget Header-->
+            <div class="widget-header">
+                <h1>OWDA Summary</h1>
+
+                <select id="time-dropdown">
+                    <option value="Yearly">Yearly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Weekly" selected>Weekly</option>
+                    <option value="Daily">Daily</option>
+                </select>
+            </div>
+
+            <!--Widget Content-->
+            <div class="widget-entry" id="location-widget-content">
+                <!--Revenue-->
+                <span class="summary-text" id="revenue">
+                    <h3>Revenue: $1,490,045</h3>
+                    <h3 id="percent-change">(+1%)</h3>
+                </span>
+
+                <!--Packages Delivered-->
+                <span class="summary-text" id="packages-delivered">
+                    <h3>Packages Delivered: 500</h3>
+                    <h3 id="percent-change">(-3%)</h3>
+                </span>
+
+                <!--Route Compliance-->
+                <span class="summary-text" id="route-compliance">
+                    <h3>Route Compliance: 80%</h3>
+                    <h3 id="percent-change">(+5%)</h3>
+                </span>
+
+                <!--Scan Compliance-->
+                <span class="summary-text" id="scan-compliance">
+                    <h3>Scan Compliance: 85%</h3>
+                    <h3 id="percent-change">(+2%)</h3>
+                </span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="../Resources/scripts/base.js" async defer></script>
+    <script src="index.js" async defer></script>
+</body>
+
+</html>
