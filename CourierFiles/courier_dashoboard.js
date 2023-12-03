@@ -15,6 +15,12 @@ function updatePackageInfo() {
             deliveryETA: 'December 7, 2023',
         },
         // Add more package data objects as needed
+        {
+            id: 'PKG782012',
+            status: 'Delivered',
+            lastLocation: 'Warehouse c',
+            deliveryETA: 'December 8, 2023',
+        },
     ];
 
     // Accessing the Package-info-content element
@@ -32,12 +38,7 @@ function updatePackageInfo() {
         // Generating HTML content for package details
         packageWidget.innerHTML = `
             <p>Package ID: ${package.id}</p>
-            <p>Status: 
-                <select class="status-dropdown">
-                    <option value="In Transit">In Transit</option>
-                    <option value="Delivered">Delivered</option>
-                </select>
-            </p>
+            <p>Status: ${package.status}</p>
             <p>Last Location: ${package.lastLocation}</p>
             <p>Estimated Delivery: ${package.deliveryETA}</p>
         `;

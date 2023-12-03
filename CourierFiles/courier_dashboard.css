@@ -59,12 +59,22 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 1vw;
-    position: relative; /* Set position to relative */
+    position: absolute; /* Change position to absolute */
+    top: 100px; /* Position from top */
+    right: 400px; /* Position from right */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: 20px; /* Adjust padding as needed */
+}
+
+.Package-info-content {
+    width: 100%;
+    height: calc(100% - 40px); /* Adjust height for content */
+    overflow-y: auto;
+    padding: 10px; /* Adjust padding as needed */
+    font-size: 0.70vw;
 }
 
 .Package-info-header {
@@ -74,12 +84,6 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
-.Package-info-content {
-    width: 100%;
-    flex: 1;
-    overflow-y: auto;
-    padding: 10px; /* Adjust padding as needed */
-}
 
 .Package-info-content.show {
     transform: translateY(0);
@@ -89,7 +93,6 @@ body {
     margin-top: 0;
     margin-bottom: 5px;
     line-height: 1;
-    font-size: 14px;
 }
 
 .widget {
