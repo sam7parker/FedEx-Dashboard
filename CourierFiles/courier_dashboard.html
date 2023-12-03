@@ -8,9 +8,22 @@
   </head>
   <body>
     <div class="background-box">
+      <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
       <img src="fedexlogo.png" alt="FedExLogo" width="150" />
       <div class="container1">
-        <div class="route_num">Route:</div>
+        <div class="route_num">
+          <label for="routeSelect">Route:</label>
+          <select id="routeSelect">
+            <option value="null">null</option>
+            <option value="route1">#111</option>
+            <option value="route2">#222</option>
+            <option value="route3">#333</option>
+          </select>
+        </div>
         <div class="stops_packages_pickup_details">Stops Delivered: 1/70</div>
         <div class="stops_packages_pickup_details">
           Packages Delivered: 3/120

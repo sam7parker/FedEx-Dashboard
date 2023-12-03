@@ -12,10 +12,10 @@ function login() {
         window.location.href = "CourierFiles/courier_dashboard.html";
         break;
       case "manager":
-        window.location.href = "manager_dashboard.html";
+        window.location.href = "ManagerFiles/home.html";
         break;
       case "executive":
-        window.location.href = "executive_dashboard.html";
+        window.location.href = "ExecutiveFiles/executive_dashboard.html";
         break;
       default:
         alert("Invalid user type");
