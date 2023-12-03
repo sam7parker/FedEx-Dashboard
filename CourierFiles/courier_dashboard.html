@@ -8,12 +8,10 @@
   </head>
   <body>
     <div class="background-box">
-      <div class="menu-icon">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+      <div class="icon">
+        <img src="Hamburger_icon.svg.png" alt="Icon" width="30" />
+        <img src="fedexlogo.png" alt="FedExLogo" width="150" />
       </div>
-      <img src="fedexlogo.png" alt="FedExLogo" width="150" />
       <div class="container1">
         <div class="route_num">
           <label for="routeSelect">Route:</label>
@@ -29,14 +27,21 @@
           Packages Delivered: 3/120
         </div>
         <div class="stops_packages_pickup_details">Pickup Locations: 0/5</div>
-        <div class = "Package-info-container">
-          <div class="Package-info">
-            <div class="Package-info-header">
-              Package Info
-            </div>
-            <div class="Package-info-content">
-            
-            </div>      
+      </div>
+      <div class="Package-info">
+        <div class="Package-info-header">Package Info</div>
+        <div class="Package-info-content">
+          <div class="widget">
+            <p>Package ID: PKG123456</p>
+            <p>
+              Status:
+              <select class="status-dropdown">
+                <option value="In Transit">In Transit</option>
+                <option value="Delivered">Delivered</option>
+              </select>
+            </p>
+            <p>Last Location: Warehouse A</p>
+            <p>Estimated Delivery: December 5, 2023</p>
           </div>
         </div>
       </div>
