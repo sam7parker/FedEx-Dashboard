@@ -10,16 +10,22 @@ function updatePackageInfo() {
         },
         {
             id: 'PKG789012',
-            status: 'Delivered',
+            status: 'In Transit',
             lastLocation: 'Warehouse B',
             deliveryETA: 'December 7, 2023',
         },
         // Add more package data objects as needed
         {
             id: 'PKG782012',
-            status: 'Delivered',
+            status: 'In Transit',
             lastLocation: 'Warehouse c',
             deliveryETA: 'December 8, 2023',
+        },
+        {
+            id: 'PCR781132',
+            status: 'In Transit',
+            lastLocation: 'Warehouse D',
+            deliveryETA: 'December 9, 2023',
         },
     ];
 
