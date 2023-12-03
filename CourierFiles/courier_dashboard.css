@@ -5,12 +5,19 @@ body {
 }
 
 #map {
-    height: 43%; /* Set the height of the map to 60% of the background box height */
-    width: 50%;
+    height: 45%; /* Set the height of the map to 60% of the background box height */
+    width: 55%;
     border: 2px solid #ccc;
     border-radius: 10px;
     margin-top: 20px;
   }
+
+  #liveTime {
+    font-size: 1.5vw; /* Set the font size using viewport width units */
+    font-weight: bold;
+    margin-left: 3vw; /* Use percentage or other relative units for margin */
+  }
+  
 
 .background-box {
     background-color: #f0f0f0;
@@ -58,7 +65,7 @@ img:first-child:hover {
     justify-content: center;
     text-align: left; /* Align the text to the left */
     font-size: 1.15vw;
-    margin: 10px;
+    margin: 8px;
 }
 
 .route_num {

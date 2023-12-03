@@ -31,6 +31,43 @@ function initMap() {
 // Call the function to initialize the map
 initMap();
 
+// Function to update live time
+// Function to update live time
+function updateLiveTime() {
+  var liveTimeElement = document.getElementById("liveTime");
+
+  function updateTime() {
+    var currentTime = new Date();
+
+    // Format the date and time
+    var options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    };
+
+    var formattedTime = currentTime.toLocaleDateString("en-US", options);
+
+    // Update the live time element
+    liveTimeElement.textContent = formattedTime;
+  }
+
+  // Update the time initially
+  updateTime();
+
+  // Update the time every second (1000 milliseconds)
+  setInterval(updateTime, 1000);
+}
+
+// Call the function to update live time
+updateLiveTime();
+
+// Call the function to update live time
+updateLiveTime();
+
 // Function to update package information
 function updatePackageInfo() {
   // ... (Your existing package information update code)
