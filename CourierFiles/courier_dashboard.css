@@ -22,13 +22,20 @@ body {
     justify-content: flex-start; /* Align items to the start (left) of the container */
 }
 
-.background-box img {
-    width: 20vw; /* 20% of the viewport width */
-    max-width: 150px; /* Set a maximum width to ensure it doesn't get too small */
-    height: auto; /* Maintain the aspect ratio */
-    display: block; /* Remove any default inline spacing */
-    margin: 0 auto; /* Center the image horizontally */
+.icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-left: 3vw; /* Use percentage or other relative units */
 }
+
+.icon img:first-child {
+    margin-right: 2vw; /* Use percentage or other relative units */
+    margin-bottom: 3vh; /* Use percentage or other relative units */
+}
+img:first-child:hover {
+    cursor: pointer;
+  }
 
 .stops_packages_pickup_details {
     width: 15vw;
@@ -41,7 +48,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: left; /* Align the text to the left */
-    font-size: 1vw;
+    font-size: 1.2vw;
     margin: 15px;
 }
 
