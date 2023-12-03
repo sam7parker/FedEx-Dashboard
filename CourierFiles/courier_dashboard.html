@@ -18,22 +18,51 @@
         <img src="fedexlogo.png" alt="FedExLogo" width="150" />
         <div id="liveTime"></div>
       </div>
-      <div class="container1">
-        <div class="route_num">
-          <label for="routeSelect">Route:</label>
-          <select id="routeSelect">
-            <option value="" disabled selected>Select a route</option>
-            <option value="route1">#111</option>
-            <option value="route2">#222</option>
-            <option value="route3">#333</option>
-            <option value="route3">#444</option>
-          </select>
+      <div class="flex-container">
+        <div class="container1">
+          <div class="route_num">
+            <label for="routeSelect">Route:</label>
+            <select id="routeSelect">
+              <option value="" disabled selected>Select a route</option>
+              <option value="route1">#111</option>
+              <option value="route2">#222</option>
+              <option value="route3">#333</option>
+              <option value="route3">#444</option>
+            </select>
+          </div>
+          <div class="stops_packages_pickup_details">Stops Delivered: 1/70</div>
+          <div class="stops_packages_pickup_details">
+            Packages Delivered: 3/120
+          </div>
+          <div class="stops_packages_pickup_details">Pickup Locations: 0/5</div>
         </div>
-        <div class="stops_packages_pickup_details">Stops Delivered: 1/70</div>
-        <div class="stops_packages_pickup_details">
-          Packages Delivered: 3/120
+        <div class="container2">
+          <button id="startButton">Start</button>
+          <div class="currentstopaddress_container">
+            <div>
+              <p>
+                <strong>Current Stop Address:</strong> 414 Lee Blvd, Starkville,
+                MS
+              </p>
+              <p><strong>Package Count:</strong> 3</p>
+              <p>
+                <strong>Instructions:</strong> Drop at the front door No
+                signature needed
+              </p>
+              <div class="additional-options">
+                <input type="checkbox" id="checkbox1" name="checkbox1" />
+                <label for="checkbox1">Delivered</label>
+
+                <input type="checkbox" id="checkbox2" name="checkbox2" />
+                <label for="checkbox2">Signed</label>
+
+                <input type="checkbox" id="checkbox3" name="checkbox3" />
+                <label for="checkbox3">Issue</label>
+                <button id="submitButton">Confirm</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="stops_packages_pickup_details">Pickup Locations: 0/5</div>
       </div>
       <div id="map"></div>
       <div class="Package-info">

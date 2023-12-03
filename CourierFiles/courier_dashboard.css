@@ -15,11 +15,13 @@ body {
   #liveTime {
     font-size: 1.5vw; /* Set the font size using viewport width units */
     font-weight: bold;
-    margin-left: 3vw; /* Use percentage or other relative units for margin */
+    margin-left: 8vw; /* Use percentage or other relative units for margin */
   }
   
 
 .background-box {
+    display: flex;
+    flex-direction: column;
     background-color: #f0f0f0;
     padding: 20px;
     box-sizing: border-box;
@@ -31,6 +33,11 @@ body {
     position: relative;
     
 }
+
+.flex-container {
+    display: flex;
+    justify-content: left;
+  }
 
 .container1 {
     display: flex;
@@ -54,7 +61,7 @@ img:first-child:hover {
   }
 
 .stops_packages_pickup_details {
-    width: 15vw;
+    width: 21.5vw;
     height: 6vh;
     flex-shrink: 0;
     border-radius: 30px;
@@ -112,7 +119,7 @@ img:first-child:hover {
     border-radius: 10px;
     position: absolute;
     top: 35%;
-    right: 25%;
+    right: 15%;
     transform: translateY(-50%);
 }
   
@@ -147,3 +154,81 @@ img:first-child:hover {
     margin-bottom: 20px; /* Spacing between each widget */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the start (left) of the container */
+}
+
+.container2 button {
+    padding: 13px;
+    font-size: 2vw;
+    width: 17vw;
+    height: 3.7vw;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-left: 60px;
+    background-color: #FF6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .container2 button:hover {
+    background-color: #4D148C;
+  }
+
+  .currentstopaddress_container {
+    width: 24vw;
+    height: 23.5vh;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 1.5px solid #000;
+    background: #FFF;
+    display: flex;
+    flex-direction: row; /* Change flex direction to row */
+    justify-content: flex-start; /* Adjust justify-content to your preference */
+    text-align: left; /* Align the text to the left */
+    font-size: 1.15vw;
+    margin: 8px;
+  }
+
+  .currentstopaddress_container div p {
+    margin: 0; /* Reset margin for paragraphs inside the div */
+    font-size: 0.84em; /* Adjust font size for paragraphs */
+    padding-left: 30px; /* Add left padding for paragraphs */
+    padding-top: 10px; /* Add left padding for paragraphs */
+
+  }
+
+  .additional-options {
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+  
+  input[type="checkbox"] {
+    margin-bottom: 5px;
+  }
+  
+  #submitButton {
+    padding: 0px;
+    font-size: 1vw;
+    width: 7vw;
+    height: 2vw;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: #FF6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  #submitButton:hover {
+    background-color: #4D148C;
+  }
