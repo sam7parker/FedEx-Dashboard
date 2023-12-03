@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FedEx Courier Dashboard</title>
     <link rel="stylesheet" href="courier_dashboard.css" />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzTatUdKas9UIKPVIpnjluQMQ4D0sYJTo&callback=initMap"
+      async
+      defer
+    ></script>
   </head>
   <body>
     <div class="background-box">
@@ -16,10 +21,11 @@
         <div class="route_num">
           <label for="routeSelect">Route:</label>
           <select id="routeSelect">
-            <option value="null">null</option>
+            <option value="" disabled selected>Select a route</option>
             <option value="route1">#111</option>
             <option value="route2">#222</option>
             <option value="route3">#333</option>
+            <option value="route3">#444</option>
           </select>
         </div>
         <div class="stops_packages_pickup_details">Stops Delivered: 1/70</div>
@@ -28,6 +34,7 @@
         </div>
         <div class="stops_packages_pickup_details">Pickup Locations: 0/5</div>
       </div>
+      <div id="map"></div>
       <div class="Package-info">
         <div class="Package-info-header">Package Info</div>
         <div class="Package-info-content">
