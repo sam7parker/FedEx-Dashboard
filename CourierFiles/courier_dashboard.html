@@ -5,44 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FedEx Courier Dashboard</title>
     <link rel="stylesheet" href="courier_dashboard.css" />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzTatUdKas9UIKPVIpnjluQMQ4D0sYJTo&callback=initMap"
+      async
+      defer
+    ></script>
   </head>
   <body>
     <div class="background-box">
       <div class="icon">
         <img src="Hamburger_icon.svg.png" alt="Icon" width="30" />
         <img src="fedexlogo.png" alt="FedExLogo" width="150" />
-      </div>
-      <div class="container1">
-        <div class="route_num">
-          <label for="routeSelect">Route:</label>
-          <select id="routeSelect">
-            <option value="null">null</option>
-            <option value="route1">#111</option>
-            <option value="route2">#222</option>
-            <option value="route3">#333</option>
-          </select>
-        </div>
-        <div class="stops_packages_pickup_details">Stops Delivered: 1/70</div>
-        <div class="stops_packages_pickup_details">
-          Packages Delivered: 3/120
-        </div>
-        <div class="stops_packages_pickup_details">Pickup Locations: 0/5</div>
-      </div>
-      <div class="Package-info">
-        <div class="Package-info-header">Package Info</div>
-        <div class="Package-info-content">
-          <div class="widget">
-            <p>Package ID: PKG123456</p>
-            <p>
-              Status:
-              <select class="status-dropdown">
-                <option value="In Transit">In Transit</option>
-                <option value="Delivered">Delivered</option>
-              </select>
-            </p>
-            <p>Last Location: Warehouse A</p>
-            <p>Estimated Delivery: December 5, 2023</p>
+        <div id="liveTime"></div>
+        <div class="header-right">
+          <img src="user.svg" class="profile-img" />
+          <div class="name-container">
+            <div class="courier-name-button">
+              <div class="dropdown">
+                <button>
+                  (Courier Name)
+                  <img src="OrangeButton.svg" class="orange-dropdown" />
+                </button>
+                <div class="dropdown-options">
+                  <a href="#">Account</a>
+                  <a href="#">Payment</a>
+                  <a href="#">Schedule</a>
+                  <a href="../index.html">Logout</a>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="container1">
+          <div class="route_num">
+            <label for="routeSelect">Route:</label>
+            <select id="routeSelect">
+              <option value="" disabled selected>Select a route</option>
+              <option value="route1">#111</option>
+              <option value="route2">#222</option>
+              <option value="route3">#333</option>
+              <option value="route3">#444</option>
+            </select>
+          </div>
+          <div class="stops_packages_pickup_details">Stops Delivered: 1/70</div>
+          <div class="stops_packages_pickup_details">
+            Packages Delivered: 3/120
+          </div>
+          <div class="stops_packages_pickup_details">Pickup Locations: 0/5</div>
+        </div>
+        <div class="container2">
+          <button id="startButton">Start</button>
+          <div class="currentstopaddress_container">
+            <div>
+              <p>
+                <strong>Current Stop Address:</strong> 414 Lee Blvd, Starkville,
+                MS
+              </p>
+              <p><strong>Package Count:</strong> 3</p>
+              <p>
+                <strong>Instructions:</strong> Drop at the front door No
+                signature needed
+              </p>
+              <div class="additional-options">
+                <input type="checkbox" id="checkbox1" name="checkbox1" />
+                <label for="checkbox1">Delivered</label>
+
+                <input type="checkbox" id="checkbox2" name="checkbox2" />
+                <label for="checkbox2">Signed</label>
+
+                <input type="checkbox" id="checkbox3" name="checkbox3" />
+                <label for="checkbox3">Issue</label>
+                <button id="submitButton">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container3">
+          <h2>Package Info</h2>
+          <div class="package-data">
+            <!-- Placeholder for dynamically generated content -->
+          </div>
+        </div>
+        <div class="flex-container2">
+          <div class="container4">
+            <div class="alert-header">
+              <h2>Alert:</h2>
+            </div>
+            <p>
+              Route 2635 (Starkville, MS) TORNADO WATCH from 11:00 AM-12:00 PM
+            </p>
+          </div>
+          <div class="container5">
+            <div class="update-header">
+              <h2>Update:</h2>
+            </div>
+            <div class="time-events">
+              <p>7:45 AM: Clock in/Route Start</p>
+              <p>8:45 AM: #15678 delivered</p>
+              <p>8:50 AM: #16786 scan complete</p>
+              <p>9:50 AM: Route 12 complete</p>
+              <p>10:45 AM: Route 30 complete</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-container3">
+        <div id="map"></div>
+        <div class="container6">
+          <div class="weather_header">
+            <h2>Weather Forecast</h2>
+          </div>
+          <div id="weatherForecast">
+            <!-- Weather forecast information will be dynamically populated here -->
+          </div>
+        </div>
+        <div class="container7">
+          <div class="personal_stat_header">
+            <h2>Personal Stats</h2>
+            <select id="statsDropdown">
+              <option value="today">Today</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+          </div>
+          <div class="personal-stats"></div>
         </div>
       </div>
     </div>
