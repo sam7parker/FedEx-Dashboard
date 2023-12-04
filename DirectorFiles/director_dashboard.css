@@ -216,6 +216,13 @@
     padding-top: 10px;
   }
 
+.widget-header2{
+    color: #000;
+    text-decoration-line: underline;
+    font: 400 30px Roboto, sans-serif;
+    padding-left: 15px;
+    padding-top: 10px;
+  } 
 .stats-value{
     color: #000;
     font: 400 16px Roboto, sans-serif;
