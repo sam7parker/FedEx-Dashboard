@@ -1,306 +1,455 @@
 /* courier_dashboard.css */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
 }
 
-#map {
-    height: 45%; /* Set the height of the map to 60% of the background box height */
-    width: 55%;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
 
-  #liveTime {
-    font-size: 1.5vw; /* Set the font size using viewport width units */
-    font-weight: bold;
-    margin-left: 8vw; /* Use percentage or other relative units for margin */
-  }
-  
+
+#liveTime {
+  font-size: 1.5vw; /* Set the font size using viewport width units */
+  font-weight: bold;
+  margin-left: 8vw; /* Use percentage or other relative units for margin */
+}
+
 
 .background-box {
-    display: flex;
-    flex-direction: column;
-    background-color: #f0f0f0;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 90%;
-    height: 90vh;
-    margin: 50px auto;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    position: relative;
-    
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 90%;
+  height: 90vh;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: relative;
+  
 }
 
 .flex-container {
-    display: flex;
-    justify-content: left;
-  }
+  display: flex;
+  justify-content: left;
+}
 
 .container1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align items to the start (left) of the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the start (left) of the container */
 }
 
 .icon {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0px;
-    margin-left: 3vw; /* Use percentage or other relative units */
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  margin-left: 3vw; /* Use percentage or other relative units */
 }
 
 .icon img:first-child {
-    margin-right: 2vw; /* Use percentage or other relative units */
-    margin-bottom: 3vh; /* Use percentage or other relative units */
+  margin-right: 2vw; /* Use percentage or other relative units */
+  margin-bottom: 3vh; /* Use percentage or other relative units */
 }
 img:first-child:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
 
 .stops_packages_pickup_details {
-    width: 21.5vw;
-    height: 6vh;
-    flex-shrink: 0;
-    border-radius: 30px;
-    border: 1.5px solid #000;
-    background: #FFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left; /* Align the text to the left */
-    font-size: 1.15vw;
-    margin: 8px;
+  width: 21.5vw;
+  height: 6vh;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 1.5px solid #000;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left; /* Align the text to the left */
+  font-size: 1.15vw;
+  margin: 8px;
 }
 
 .route_num {
-    width: 20vw;
-    font-size: 2.5vw;
-    text-align: left;
-    height: 6vh;
-    flex-shrink: 0;
-    border-radius: 30px;
-    border: 1.5px solid #000;
-    background: #FFF;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin: 15px;
-    padding-left: 15px;
-    font-weight: bold;
-    position: relative; /* Add position relative to the parent container */
-    max-width: 100%; 
+  width: 20vw;
+  font-size: 2.5vw;
+  text-align: left;
+  height: 6vh;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 1.5px solid #000;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 15px;
+  padding-left: 15px;
+  font-weight: bold;
+  position: relative; /* Add position relative to the parent container */
+  max-width: 100%; 
 }
 
 .route_num select {
-    width: 100%;
-    border: 1.5px solid #000;
-    background: #FFF;
-    font-size: 1.2vw;
-    margin: 15px;
-  }
-  
-  /* Style for the label, you can customize this according to your design */
-  .route_num label {
-    font-size: 2.5vw;
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-  }
+  width: 100%;
+  border: 1.5px solid #000;
+  background: #FFF;
+  font-size: 1.2vw;
+  margin: 15px;
+}
+
+/* Style for the label, you can customize this according to your design */
+.route_num label {
+  font-size: 2.5vw;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
 
 
 .container2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align items to the start (left) of the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the start (left) of the container */
 }
 
 .container2 button {
-    padding: 13px;
-    font-size: 2vw;
-    width: 17vw;
-    height: 3.7vw;
+  padding: 13px;
+  font-size: 2vw;
+  width: 17vw;
+  height: 3.7vw;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-left: 60px;
+  background-color: #FF6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.container2 button:hover {
+  background-color: #4D148C;
+}
+
+.currentstopaddress_container {
+  width: 24vw;
+  height: 23.5vh;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 1.5px solid #000;
+  background: #FFF;
+  display: flex;
+  flex-direction: row; /* Change flex direction to row */
+  justify-content: flex-start; /* Adjust justify-content to your preference */
+  text-align: left; /* Align the text to the left */
+  font-size: 1.15vw;
+  margin: 8px;
+}
+
+.currentstopaddress_container div p {
+  margin: 0; /* Reset margin for paragraphs inside the div */
+  font-size: 0.84em; /* Adjust font size for paragraphs */
+  padding-left: 30px; /* Add left padding for paragraphs */
+  padding-top: 10px; /* Add left padding for paragraphs */
+
+}
+
+.additional-options {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+input[type="checkbox"] {
+  margin-bottom: 5px;
+}
+
+#submitButton {
+  padding: 0px;
+  font-size: 1vw;
+  width: 7vw;
+  height: 2vw;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 0px;
+  background-color: #FF6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#submitButton:hover {
+  background-color: #4D148C;
+}
+
+
+.container3{
+  width: 15vw;
+  height: 30vh;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 1.5px solid #000;
+  background: #FFF;
+  display: flex;
+  text-align: left; /* Align the text to the left */
+  font-size: 1.15vw;
+  margin: 8px;
+  border-radius: 10px;
+  font-size: 1vw;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(158, 35, 35, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+ 
+.container3 h2 {
+    padding: 10px;
+    text-align: center;
     font-weight: bold;
-    margin-top: 12px;
-    margin-left: 60px;
-    background-color: #FF6600;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  .container2 button:hover {
-    background-color: #4D148C;
-  }
-
-  .currentstopaddress_container {
-    width: 24vw;
-    height: 23.5vh;
-    flex-shrink: 0;
-    border-radius: 30px;
-    border: 1.5px solid #000;
-    background: #FFF;
-    display: flex;
-    flex-direction: row; /* Change flex direction to row */
-    justify-content: flex-start; /* Adjust justify-content to your preference */
-    text-align: left; /* Align the text to the left */
-    font-size: 1.15vw;
-    margin: 8px;
-  }
-
-  .currentstopaddress_container div p {
-    margin: 0; /* Reset margin for paragraphs inside the div */
-    font-size: 0.84em; /* Adjust font size for paragraphs */
-    padding-left: 30px; /* Add left padding for paragraphs */
-    padding-top: 10px; /* Add left padding for paragraphs */
-
-  }
-
-  .additional-options {
-    margin-top: 10px;
-    margin-left: 30px;
-  }
-  
-  input[type="checkbox"] {
-    margin-bottom: 5px;
-  }
-  
-  #submitButton {
-    padding: 0px;
-    font-size: 1vw;
-    width: 7vw;
-    height: 2vw;
-    font-weight: bold;
-    margin-top: 0px;
-    margin-left: 0px;
-    background-color: #FF6600;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  #submitButton:hover {
-    background-color: #4D148C;
-  }
-
-  .header {
-    display: flex;
-    margin-top: 5px;
-    width: 100%;
-    padding-right: 6px;
-    justify-content: space-between;
-    gap: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px; /* Adjust margin for spacing */
 }
 
-.header-left {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+.package-data {
+    max-height: calc(100% - 60px); /* Adjust max height for content scrolling */
+    overflow-y: auto;
+    padding-top: 10px; /* Add padding to the top */
 }
 
-.hamburger {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 46px;
-    overflow: hidden;
-    max-width: 100%;
-    margin: auto 0;
-  }
-
-.fxlogo {
-    aspect-ratio: 1.82;
-    object-fit: contain;
-    object-position: center;
-    width: 133px;
-    overflow: hidden;
-    align-self: stretch;
-    max-width: 100%;
-  }
-
-.date {
-    color: #000;
-    align-self: center;
-    margin-top: 5px;
-    flex-grow: 1;
-    flex-basis: auto;
-    font: 400 18px Sintony, sans-serif;
-  }
-
-.header-right {
-    align-self: start;
-    display: flex;
-    margin-top: 6px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-.profile-img {
-    aspect-ratio: 0.93;
-    object-fit: contain;
-    object-position: center;
-    width: 25px;
-    fill: #000;
-    overflow: hidden;
-    max-width: 100%;
-    margin: auto 0;
-  }
-
-
-.name-container {
-    align-self: stretch;
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 0%;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-.courier-name-button {
-    border-radius: 20px;
-    border: 1px solid #000;
-    background-color: #d9d9d9;
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    gap: 17px;
-    padding: 8px 9px;
+.package-item {
+    margin-bottom: 15px; /* Add space between each package item */
 }
 
-.orange-dropdown {
-  aspect-ratio: 1.47;
-  object-fit: contain;
-  object-position: center;
-  width: 22px;
-  fill: #f60;
-  overflow: hidden;
-  margin-top: 5px;
-  max-width: 100%;
+.package-item h3 {
+    margin-bottom: 5px; /* Adjust spacing for the header */
 }
 
-.dropdown {
-  display: inline-block;
+.package-item p {
+    margin: 3px 0; /* Adjust spacing for paragraphs */
+}
+
+.container4 {
+  /* Styles for container4 */
+  /* Set the height to half of container3's height */
+  height: 12vh;
+  width: 20vw;
+  /* ... (other styles) ... */
+  flex-shrink: 0;
+  border: 1.5px solid #000;
+  background: #FFF;
+  display: flex;
+  flex-direction: row; /* Change flex direction to row */
+  justify-content: flex-start; /* Adjust justify-content to your preference */
+  text-align: left; /* Align the text to the left */
+  font-size: 1.15vw;
+  margin: 8px;
   position: relative;
+  padding-top: 40px; /* Ensure the header doesn't overlap */
+  border-radius:10px; /* Set only the bottom corners to be rounded */
+
 }
 
-button{
-  border:none;
-  border-radius:5px;
-  padding:15px 30px;
-  font-size:18px;
-  cursor:pointer;
+.alert-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box; /* Include padding in width calculations */
+  background-color: #f0f0f0;
+  border-radius: 10px 10px 0 0; /* Round the top corners */
+  display: flex;
+  align-items: center; /* Align items horizontally */
 }
 
-button:hover{
-  background-color:#ddd;
+.alert-header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.alert-header h2:before {
+  content: "⚠️"; /* Your preferred alert icon or text */
+  padding-right: 5px;
+}
+
+.container4 p {
+  margin: 5px 0 0 0;
+  font-size: 0.9rem;
+}
+
+.container5 {
+  height: 12vh;
+  width: 20vw;
+  border: 1.5px solid #000;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 0.9rem;
+  margin: 8px;
+  position: relative;
+  border-radius: 10px;
+  overflow-y: auto; /* Enable vertical scroll if content exceeds the height */
+  padding-top: 40px;
+}
+
+.container5 .time-events {
+  max-height: calc(100% - 40px); /* Set max height for time-stamped events for scrolling */
+  overflow-y: auto; /* Enable vertical scroll if content exceeds the height */
+  padding: 10px;
+}
+
+.container5 .time-events p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.update-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.update-header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.update-header h2:before {
+  padding-right: 5px;
+}
+
+
+
+.flex-container2{
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
+#map {
+  height: 40vh; /* Set the height of the map to 50% of the viewport height */
+  width: 55%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.flex-container3 {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: flex-start; /* Align map to the top */
+}
+
+.container6 {
+  height: 38vh;
+  width: 15vw;
+  border: 1.5px solid #000;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 0.9rem;
+  margin: 8px;
+  position: relative;
+  border-radius: 10px;
+  overflow-y: auto; /* Enable vertical scroll if content exceeds the height */
+  padding-top: 40px;
+}
+
+.weather_header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+}
+
+#weatherForecast {
+  /* Adjust the weather forecast area to take up the left half */
+ 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container7 {
+  height: 41vh;
+  width: 21vw;
+  border: 1.5px solid #000;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 0.9rem;
+  margin: 8px;
+  position: relative;
+  border-radius: 10px;
+  overflow-y: auto; /* Enable vertical scroll if content exceeds the height */
+  padding-top: 10px;
+}
+
+.personal_stat_header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: left;
+  padding-left: 10px;
+  
+}
+
+.personal_stat_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  margin-left: auto; /* Ensures it's at the right side */
+  margin-right: 10px; /* Provide space between the header and the dropdown */
+}
+
+
+#statsDropdown {
+  padding: 8px;
+  font-size: 14px;
+  background-color: rgb(255, 102, 0); /* Change the background color to orange */
+}
+
+/* Position the dropdown on the right side */
+.dropdown-wrapper::after {
+  content: '▼';
+  position: absolute;
+  top: 50%;
+  right: -10px; /* Adjust the distance from the right (negative value) */
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #333;
+  font-size: 10px;
+}
+
+/* Adjust appearance of the dropdown */
+.dropdown-wrapper::after {
+  color: #722121;
+  font-size: 10px;
+}
+
+.personal-stats {
+  padding-left: 5%;
+  font-size: 20px;
 }
 
 .dropdown-options {

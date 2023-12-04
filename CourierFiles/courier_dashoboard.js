@@ -69,9 +69,172 @@ updateLiveTime();
 updateLiveTime();
 
 // Function to update package information
+// Function to update package information
+// Function to update package information
 function updatePackageInfo() {
-  // ... (Your existing package information update code)
+  // Simulated package information (replace this with actual data retrieval)
+  const packageInfo = [
+    {
+      id: "PKG123456",
+      status: "In Transit",
+      lastLocation: "Warehouse A",
+      deliveryETA: "December 5, 2023",
+    },
+    {
+      id: "PKG231424",
+      status: "In Transit",
+      lastLocation: "Warehouse B",
+      deliveryETA: "December 5, 2023",
+    },
+    {
+      id: "AFK231424",
+      status: "In Transit",
+      lastLocation: "Warehouse C",
+      deliveryETA: "December 5, 2023",
+    },
+    {
+      id: "WER231424",
+      status: "In Transit",
+      lastLocation: "Warehouse D",
+      deliveryETA: "December 5, 2023",
+    },
+  ];
+
+  const packageDataContainer = document.querySelector(".package-data");
+
+  packageDataContainer.innerHTML = ""; // Clear previous package information
+
+  packageInfo.forEach((pkg) => {
+    const packageDiv = document.createElement("div");
+    packageDiv.classList.add("package-item");
+
+    packageDiv.innerHTML = `
+      <p>Package ID: ${pkg.id}</p>
+      <p>Status: ${pkg.status}</p>
+      <p>Last Location: ${pkg.lastLocation}</p>
+      <p>Delivery ETA: ${pkg.deliveryETA}</p>
+    `;
+    packageDataContainer.appendChild(packageDiv);
+  });
 }
 
-// Call the function to update package information and set up the dropdown
-updatePackageInfo();
+// Call the function to update package information after the DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  updatePackageInfo();
+});
+
+const latitude = 33.4503998; // Update with your actual latitude
+const longitude = -88.8183872; // Update with your actual longitude
+const apiKey = "6519df159dbfc0af73e927df274063dd"; // Replace with your OpenWeatherMap API key
+
+function kelvinToFahrenheit(kelvin) {
+  return (kelvin - 273.15) * 1.8 + 32;
+}
+
+function fetchWeatherData(latitude, longitude, apiKey) {
+  fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      // Process the fetched weather data
+      const weatherForecastElement = document.getElementById("weatherForecast");
+      const temperatureInFahrenheit = kelvinToFahrenheit(data.main.temp); // Convert temperature to Fahrenheit
+      const weatherIcon = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`; // Weather icon URL
+
+      weatherForecastElement.innerHTML = `
+          <img src="${weatherIcon}" alt="Weather Icon" class="weather-icon" style="width: 80px; height: 80px;">
+          <p class="temperature">Temperature: ${temperatureInFahrenheit.toFixed(
+            2
+          )}°F</p>
+          <p class="weather-description">Weather: ${
+            data.weather[0].description
+          }</p>
+          <p class="additional-info">Humidity: ${data.main.humidity}%</p>
+          <p class="additional-info">Wind Speed: ${data.wind.speed} m/s</p>
+          <p class="additional-info">Highest Temperature: ${kelvinToFahrenheit(
+            data.main.temp_max
+          ).toFixed(2)}°F</p>
+          <p class="additional-info">Lowest Temperature: ${kelvinToFahrenheit(
+            data.main.temp_min
+          ).toFixed(2)}°F</p>
+        `;
+    })
+    .catch((error) => {
+      console.error("Error fetching weather data:", error);
+    });
+}
+
+// Call the fetchWeatherData function with the updated latitude, longitude, and API key
+fetchWeatherData(latitude, longitude, apiKey);
+
+function updateStats() {
+  const dropdown = document.getElementById("statsDropdown");
+  const selectedOption = dropdown.value;
+
+  // Get the container for personal statistics
+  const personalStatsContainer = document.querySelector(".personal-stats");
+
+  // Update statistics based on the selected option
+  switch (selectedOption) {
+    case "today":
+      // Update stats for today
+      personalStatsContainer.innerHTML = `
+        <p>Deliveries Today: 23</p>
+        <p>Successful Deliveries: 20</p>
+        <p>Failed Deliveries: 3</p>
+        <p>Average Delivery Time: 1h 30m</p>
+        <p>Average Stop Duration: 5m</p>
+        <!-- Add more statistics as needed -->
+      `;
+      break;
+    case "weekly":
+      // Update stats for the week
+      personalStatsContainer.innerHTML = `
+        <p>Deliveries This Week: 150</p>
+        <p>Successful Deliveries: 130</p>
+        <p>Failed Deliveries: 20</p>
+        <p>Average Delivery Time: 1h 45m</p>
+        <p>Average Stop Duration: 10m</p>
+        <!-- Add more statistics as needed -->
+      `;
+      break;
+    case "monthly":
+      // Update stats for the month
+      personalStatsContainer.innerHTML = `
+        <p>Deliveries This Month: 650</p>
+        <p>Successful Deliveries: 600</p>
+        <p>Failed Deliveries: 50</p>
+        <p>Average Delivery Time: 1h 55m</p>
+        <p>Average Stop Duration: 20m</p>
+        <!-- Add more statistics as needed -->
+      `;
+      break;
+    case "yearly":
+      // Update stats for the year
+      personalStatsContainer.innerHTML = `
+        <p>Deliveries This Year: 5200</p>
+        <p>Successful Deliveries: 5000</p>
+        <p>Failed Deliveries: 200</p>
+        <p>Average Delivery Time: 2h</p>
+        <p>Average Stop Duration: 30m</p>
+        <!-- Add more statistics as needed -->
+      `;
+      break;
+    default:
+      break;
+  }
+}
+
+// Call the updateStats function when the dropdown value changes
+document
+  .getElementById("statsDropdown")
+  .addEventListener("change", updateStats);
+
+// Update statistics initially based on the default selected option
+updateStats();

@@ -13,12 +13,11 @@
   </head>
   <body>
     <div class="background-box">
-      <div class="header">
-        <div class="header-left">
-          <img src="Hamburger_icon.png" class="hamburger" />
-          <img src="fedexlogo.png" class="fxlogo" />
-          <div id="liveTime"></div>
-        </div>
+      <div class="icon">
+        <img src="Hamburger_icon.svg.png" alt="Icon" width="30" />
+        <img src="fedexlogo.png" alt="FedExLogo" width="150" />
+        <div id="liveTime"></div>
+        \
         <div class="header-right">
           <img src="user.svg" class="profile-img" />
           <div class="name-container">
@@ -84,8 +83,58 @@
             </div>
           </div>
         </div>
+        <div class="container3">
+          <h2>Package Info</h2>
+          <div class="package-data">
+            <!-- Placeholder for dynamically generated content -->
+          </div>
+        </div>
+        <div class="flex-container2">
+          <div class="container4">
+            <div class="alert-header">
+              <h2>Alert:</h2>
+            </div>
+            <p>
+              Route 2635 (Starkville, MS) TORNADO WATCH from 11:00 AM-12:00 PM
+            </p>
+          </div>
+          <div class="container5">
+            <div class="update-header">
+              <h2>Update:</h2>
+            </div>
+            <div class="time-events">
+              <p>7:45 AM: Clock in/Route Start</p>
+              <p>8:45 AM: #15678 delivered</p>
+              <p>8:50 AM: #16786 scan complete</p>
+              <p>9:50 AM: Route 12 complete</p>
+              <p>10:45 AM: Route 30 complete</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="map"></div>
+      <div class="flex-container3">
+        <div id="map"></div>
+        <div class="container6">
+          <div class="weather_header">
+            <h2>Weather Forecast</h2>
+          </div>
+          <div id="weatherForecast">
+            <!-- Weather forecast information will be dynamically populated here -->
+          </div>
+        </div>
+        <div class="container7">
+          <div class="personal_stat_header">
+            <h2>Personal Stats</h2>
+            <select id="statsDropdown">
+              <option value="today">Today</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+          </div>
+          <div class="personal-stats"></div>
+        </div>
+      </div>
     </div>
     <script src="courier_dashoboard.js"></script>
   </body>
