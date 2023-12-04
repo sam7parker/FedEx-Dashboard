@@ -15,7 +15,7 @@ function login() {
         window.location.href = "ManagerFiles/home.html";
         break;
       case "executive":
-        window.location.href = "ExecutiveFiles/executive_dashboard.html";
+        window.location.href = "DirectorFiles/director_dashboard.html";
         break;
       default:
         alert("Invalid user type");
