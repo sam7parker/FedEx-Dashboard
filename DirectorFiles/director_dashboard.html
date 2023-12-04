@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FedEx Director Dashboard</title>
+    <link rel="stylesheet" href="director_dashboard.css" />
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzTatUdKas9UIKPVIpnjluQMQ4D0sYJTo&callback=initMap"
+        async
+        defer
+    ></script>
+  </head>
+  <body>
+    <div class="main-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="Hamburger_icon.png" class="hamburger"/>
+        <img src="fedexlogo.png" class="fxlogo"/>
+        <div id ="liveTime"></div>
+        <div class="date">September 21, 2023 10:45 AM</div>
+      </div>
+      <div class="header-right">
+        <img src="user.svg" class="profile-img"/>
+        <div class="name-container">
+          <div class="director-name-button">
+            <div class="dropdown">
+                <button>(Director Name)
+                    <img src="OrangeButton.svg" class="orange-dropdown"/>
+                </button>
+                <div class="dropdown-options">
+                  <a href="#">Account</a>
+                  <a href="#">Payment</a>
+                  <a href="#">Schedule</a>
+                  <a href="#">Logout</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body-outline">
+      <div class="body-container">
+        <div class="column">
+          <div class="overall-stats-group">
+            <div class="overall-button widget ">
+              <label for="regionSelect">Region:</label>
+              <select id="regionSelect">
+                <option value = "overall" selected >Overall</option>
+                <option value = "region1">1</option>
+                <option value = "region2">2</option>
+                <option value = "region3">3</option>
+              </select>
+            </div>
+            <div class="stats-pair-one">
+              <div class="stats-widget widget">
+                <div class="widget-header">Shipments:</div>
+                <div class="stats-value">2000<span>+10%</span></div>
+              </div>
+              <div class="stats-widget widget">
+                <div class="widget-header">Out for Delivery:</div>
+                <div class="stats-value">500<span>+1%</span></div>
+              </div>
+            </div>
+            <div class="stats-pair-two">
+              <div class="stats-widget widget">
+                <div class="widget-header">Avg Delivery Time:</div>
+                <div class="stats-value">3hr 55 min<span>-5%</span></div>
+              </div>
+              <div class="stats-widget widget">
+                <div class="widget-header">In Route:</div>
+                <div class="stats-value">600<span>-2%</span></div>
+              </div>
+            </div>
+            <div class="stats-pair-three">
+              <div class="stats-widget widget">
+                <div class="widget-header">Avg. Stop Time:</div>
+                <div class="stats-value">5 min 21 sec<span>+9%</span></div>
+              </div>
+              <div class="stats-widget widget">
+                <div class="widget-header">Missed Delivery:</div>
+                <div class="stats-value">35 <span>+2%</span></div>
+              </div>
+            </div>
+          </div>
+          <div class = "compliance-stats widget">
+            <div class="widget-header">Compliance Stats</div>
+          </div>
+        </div>
+        <div class="column-2">
+          <div class="div-23">
+            <div class="div-24">
+              <div class="div-25">
+                <div class="column-3"><div class="districts widget">
+                  <div class="widget-header">Districts</div>
+                </div></div>
+                <div class="column-4"><div class="updates widget">
+                  <div class="widget-header">Updates</div>
+                </div></div>
+              </div>
+            </div>
+            <!--<div class="maps widget">-->
+            <div id="map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="director_dashboard.js"></script>
+  </body>
+</html>
