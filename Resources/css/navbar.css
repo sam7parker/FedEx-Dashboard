@@ -24,12 +24,12 @@ header {
 }
 
 #hamburger-menu button {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-left: 0.5rem;
 }
 
 #hamburger-menu ul {
-    padding-right: 5rem;
+    margin-left: 1rem;
 }
 
 #hamburger-menu li {

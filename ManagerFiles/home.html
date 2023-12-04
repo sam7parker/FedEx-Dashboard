@@ -56,13 +56,14 @@
             <!--Widget Header-->
             <div class="widget-header">
                 <h3>Alerts</h3>
-                <i class="icon-32" name="alerts-icon" data-feather="bell"></i>
+                <a href="pages/alerts.html"><i class="icon-32" name="alerts-icon" data-feather="bell"></i></a>
             </div>
 
             <!--Widget Content-->
             <div class="widget-entry" id="alert">
                 <i class="icon-24" id="alert-entry-icon" data-feather="alert-triangle"></i>
-                <p>Truck Breakdown: Driver Brian Jones (9447)</p>
+                <p id="alert-message">Truck Breakdown: Driver Brian Jones (9447)</p>
+                <button id="alert-btn" onclick="ClearAlert()"><i class="icon-24" data-feather="x"></i></button>
             </div>
         </section>
 

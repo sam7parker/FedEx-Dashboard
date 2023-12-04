@@ -3,6 +3,7 @@
 .widget {
     display: flex;
     flex-direction: column;
+    row-gap: 1rem;
 }
 
 .widget-header {
@@ -18,5 +19,4 @@
     padding: var(--widget-padding);
     font-size: var(--widget-font-size);
     width: 80vw;
-    margin-bottom: 0rem;
 }
