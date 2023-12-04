@@ -453,6 +453,18 @@ input[type="checkbox"] {
   font-size: 20px;
 }
 
+button{
+  border:none;
+  border-radius:5px;
+  padding:15px 30px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+button:hover{
+  background-color:#ddd;
+}
+
 .dropdown-options {
   width: 100%;
   display: none;
@@ -498,4 +510,29 @@ input[type="checkbox"] {
   overflow: hidden;
   max-width: 100%;
   margin: auto 0;
+}
+
+.header-right {
+  align-self: start;
+  display: flex;
+  margin-top: 6px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.courier-name-button {
+  border-radius: 20px;
+  border: 1px solid #000;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 17px;
+  padding: 8px 9px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
 }
