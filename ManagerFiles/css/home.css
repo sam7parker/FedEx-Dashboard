@@ -20,6 +20,12 @@
     column-gap: 0.5rem;
 }
 
+#location-widget-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
 #location-widget-content #revenue #percent-change {
     color: var(--percent-green)
 }
