@@ -19,8 +19,8 @@ body {
   background-color: #f0f0f0;
   padding: 20px;
   box-sizing: border-box;
-  width: 90%;
-  height: 90vh;
+  width: 92%;
+  height: 100vh;
   margin: 50px auto;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -355,7 +355,7 @@ input[type="checkbox"] {
 }
 
 .container6 {
-  height: 38vh;
+  height: 37vh;
   width: 15vw;
   border: 1.5px solid #000;
   background: #FFF;
@@ -369,6 +369,7 @@ input[type="checkbox"] {
   border-radius: 10px;
   overflow-y: auto; /* Enable vertical scroll if content exceeds the height */
   padding-top: 40px;
+  margin-left: 25px;
 }
 
 .weather_header h2 {
@@ -478,4 +479,23 @@ input[type="checkbox"] {
   color: #0a0a23;
   background-color: #ddd;
   border-radius:5px;
+}
+
+.name-container {
+  align-self: stretch;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0%;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-img {
+  aspect-ratio: 0.93;
+  object-fit: contain;
+  object-position: center;
+  width: 25px;
+  fill: #000;
+  overflow: hidden;
+  max-width: 100%;
+  margin: auto 0;
 }
