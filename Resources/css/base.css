@@ -9,6 +9,7 @@
     --widget-radius: 10px;
     --widget-padding: 0.5rem;
     --widget-font-size: 14px;
+    --widget-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -43,16 +44,19 @@ button {
 }
 
 select {
-    border: none;
+    border: 0px;
+    outline: 0px;
+
     border-radius: var(--widget-radius);
     padding: var(--widget-padding);
+
+    box-shadow: var(--widget-shadow);
 }
 
-/*
-section {
-    z-index: -2;
+select#xyz {
+    border: 0px;
+    outline: 0px;
 }
-*/
 
 .icon-14 {
     width: 14px;
