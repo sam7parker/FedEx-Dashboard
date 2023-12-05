@@ -219,7 +219,7 @@
 .widget-header2{
     color: #000;
     text-decoration-line: underline;
-    font: 400 30px Roboto, sans-serif;
+    font: 400 25px Roboto, sans-serif;
     padding-left: 15px;
     padding-top: 10px;
   } 
@@ -316,6 +316,7 @@
     height: 315px;
     flex-direction: column;
     margin: 0 auto;
+    overflow-y: scroll;
   }
 
 .maps {
@@ -383,4 +384,11 @@
     color: #0a0a23;
     background-color: #ddd;
     border-radius:5px;
+  }
+
+  .updates-alerts p{
+    /*text-indent: .5em;*/
+    text-align: left;
+    padding: 5px;
+
   }
