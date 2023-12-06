@@ -4,12 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FedEx Director Dashboard</title>
-    <link rel="stylesheet" href="director_dashboard.css" />
+    <link rel="stylesheet" href="director_dashboard.css"/>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzTatUdKas9UIKPVIpnjluQMQ4D0sYJTo&callback=initMap"
         async
         defer
     ></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Route Compliance', 'Scan Compliance'],
+          ['2004',  88,      90],
+          ['2005',  77,      87],
+          ['2006',  91,       88],
+          ['2007',  97,      79]
+        ]);
+
+        var options = {
+          title: '',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }</script>
   </head>
   <body>
     <div class="main-container">
@@ -83,7 +107,8 @@
             </div>
           </div>
           <div class = "compliance-stats widget">
-            <div class="widget-header2"><b>Compliance Stats</b></div>
+            <div class="widget-header2"> <b>Compliance Stats</b></div>
+            <div id="curve_chart"></div>
           </div>
         </div>
         <div class="column-2">
@@ -114,6 +139,8 @@
     </div>
   </div>
   <script src="director_dashboard.js"></script>
+ 
+
   </body>
 </html>
 
