@@ -28,9 +28,29 @@
 }
 
 #location-widget-content {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
+    display: grid;
+    text-wrap: nowrap;
+    row-gap: 0.5rem;
+    column-gap: 2rem;
+    grid-template-columns: 1fr 2rem;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        'revenue revenue'
+        'packages-delivered stats-button'
+        'route-compliance stats-button'
+        'scan-compliance stats-button';
+}
+
+#revenue {
+    grid-area: revenue;
+}
+
+#packages-delivered {
+    grid-area: packages-delivered;
+}
+
+#stats-button {
+    grid-area: stats-button;
 }
 
 #location-widget-content #revenue #percent-change {
@@ -73,8 +93,10 @@
     display: grid;
     font-size: 13px;
     text-wrap: nowrap;
-    grid-template-columns: repeat(3, 8.5rem);
-    grid-template-rows: repeat(3, 1.5rem);
+    row-gap: 0.5rem;
+    column-gap: 1rem;
+    grid-template-columns: 1fr 1fr 2rem;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
         'driver-name driver-name driver-name'
         'route-number route-compliance details-button'
