@@ -89,3 +89,11 @@ select#xyz {
 .grid-column-span-2 {
     grid-column: span 2;
 }
+
+.percent-color-green {
+    color: var(--percent-green)
+}
+
+.percent-color-red {
+    color: var(--percent-red);
+}

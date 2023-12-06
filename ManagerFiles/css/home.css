@@ -61,22 +61,6 @@
     grid-area: stats-button;
 }
 
-#location-widget-content #revenue #percent-change {
-    color: var(--percent-green)
-}
-
-#location-widget-content #packages-delivered #percent-change {
-    color: var(--percent-red)
-}
-
-#location-widget-content #route-compliance #percent-change {
-    color: var(--percent-green)
-}
-
-#location-widget-content #scan-compliance #percent-change {
-    color: var(--percent-green)
-}
-
 /* Courier Widget */
 #courier-widget-title {
     margin-left: 1rem;
@@ -141,6 +125,7 @@
 
         display: flex;
         flex-direction: row;
+        column-gap: 1.5rem;
         justify-content: space-around;
         align-items: start;
     }
@@ -148,7 +133,7 @@
     #desktop-wrapper {
         display: flex;
         flex-direction: column;
-        row-gap: 5rem;
+        row-gap: 3rem;
     }
 
     .widget-entry {
