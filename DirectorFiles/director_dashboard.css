@@ -9,7 +9,7 @@
 #map {
     height: 60%; /* Set the height of the map to 60% of the background box height */
     width: 95%;
-    border: 2px solid #ccc;
+    border: 2px solid #000;
     border-radius: 10px;
     margin-top: 20px;
 }
@@ -392,3 +392,11 @@
     padding: 5px;
 
   }
+
+  #curve_chart{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    border-radius: 10%;
+  }
+
