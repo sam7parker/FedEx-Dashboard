@@ -18,16 +18,23 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Date', 'Route Compliance', 'Scan Compliance'],
-          ['2004',  88,      90],
-          ['2005',  77,      87],
-          ['2006',  91,       88],
-          ['2007',  97,      79]
+          ['Sun.',   88,     90],
+          ['Mon.',   77,     87],
+          ['Tues.',  91,     88],
+          ['Wed.',   97,     79],
+          ['Thur.',  88,     99],
+          ['Fri.',   99,     89],
+          ['Sat.',   85,     99]
         ]);
 
         var options = {
           title: '',
           curveType: 'function',
-          legend: { position: 'bottom' }
+          legend: { position: 'bottom' },
+          series:{
+            0: {color: '#4D148C'},
+            1: {color: '#f60'},
+          }
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
@@ -107,7 +114,14 @@
             </div>
           </div>
           <div class = "compliance-stats widget">
-            <div class="widget-header2"> <b>Compliance Stats</b></div>
+            <div class="widget-header2"><b>Compliance Stats</b>
+            <select id="statsDropdown">
+              <option value="today">Today</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+            </div>
             <div id="curve_chart"></div>
           </div>
         </div>
