@@ -337,6 +337,7 @@
     display: flex;
     margin-top: 17px;
     max-width: 100%;
+    width: 900px;
     height: 340px;
     flex-direction: column;
   }
@@ -398,5 +399,17 @@
     width: 100%;
     height: 80%;
     border-radius: 10%;
+    flex-direction: column;
+    overflow-x: auto;
   }
+
+  #statsDropdown {
+    padding: 5px;
+    font-size: 15px;
+    background-color: rgb(255, 102, 0); /* Change the background color to orange */
+    border-radius: 5px;
+    float:right;
+    margin: 0 20px 0 0;
+  }
+   
 
