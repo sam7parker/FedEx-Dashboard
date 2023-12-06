@@ -73,3 +73,28 @@ function initMap() {
   
   // Call the function to update package information and set up the dropdown
   updatePackageInfo();
+
+ 
+//Line graph
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Date', 'Route Compliance', 'Scan Compliance'],
+            ['2004',  88,      90],
+            ['2005',  77,      87],
+            ['2006',  91,       88],
+            ['2007',  97,      79]
+          ]);
+  
+          var options = {
+            title: 'Company Performance',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+          };
+  
+          var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+  
+          chart.draw(data, options);
+        }
