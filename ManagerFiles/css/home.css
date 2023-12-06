@@ -1,6 +1,13 @@
 @import "../../Resources/css/navbar.css";
 @import "../../Resources/css/widget.css";
 
+#desktop-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2;
+}
+
+/* Alerts Widget */
 #alert {
     display: flex;
     align-items: center;
@@ -22,6 +29,7 @@
     margin-top: 0.5rem;
 }
 
+/* Location Summary Widget */
 .summary-text {
     display: flex;
     column-gap: 0.5rem;
@@ -125,4 +133,29 @@
 
 #scan-compliance {
     grid-area: scan-compliance;
+}
+
+@media (min-width: 1000px) {
+    main {
+        padding: 2rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+    }
+
+    #desktop-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+    }
+
+    .widget-entry {
+        width: 45vw;
+    }
+
+    #courier-widget-content {
+        max-height: 75vh;
+    }
 }

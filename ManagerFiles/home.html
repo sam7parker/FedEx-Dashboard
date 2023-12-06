@@ -51,68 +51,71 @@
     </header>
 
     <main>
-        <!--Alerts Widget-->
-        <section class="widget" id="alerts-widget">
-            <!--Widget Header-->
-            <div class="widget-header">
-                <h3>Alerts</h3>
-                <a href="pages/alerts.html"><i class="icon-32" name="alerts-icon" data-feather="bell"></i></a>
-            </div>
+        <!--For Alerts and Location Widget for Desktop-->
+        <div id="desktop-wrapper">
+            <!--Alerts Widget-->
+            <section class="widget" id="alerts-widget">
+                <!--Widget Header-->
+                <div class="widget-header">
+                    <h3>Alerts</h3>
+                    <a href="pages/alerts.html"><i class="icon-32" name="alerts-icon" data-feather="bell"></i></a>
+                </div>
 
-            <!--Widget Content-->
-            <div class="widget-entry" id="alert">
-                <span>
-                    <i class="icon-24" id="alert-entry-icon" data-feather="alert-triangle"></i>
-                    <p id="alert-message">Truck Breakdown: Driver Brian Jones (9447)</p>
-                </span>
-                <button id="alert-btn" onclick="ClearAlert()"><i class="icon-24" data-feather="x"></i></button>
-            </div>
-        </section>
+                <!--Widget Content-->
+                <div class="widget-entry" id="alert">
+                    <span>
+                        <i class="icon-24" id="alert-entry-icon" data-feather="alert-triangle"></i>
+                        <p id="alert-message">Truck Breakdown: Driver Brian Jones (9447)</p>
+                    </span>
+                    <button id="alert-btn" onclick="ClearAlert()"><i class="icon-24" data-feather="x"></i></button>
+                </div>
+            </section>
 
-        <!--Location Summary-->
-        <section class="widget" id="location-widget">
-            <!--Widget Header-->
-            <div class="widget-header">
-                <h3>OWDA Summary</h3>
+            <!--Location Summary-->
+            <section class="widget" id="location-widget">
+                <!--Widget Header-->
+                <div class="widget-header">
+                    <h3>OWDA Summary</h3>
 
-                <select id="time-dropdown">
-                    <option value="Yearly">Yearly</option>
-                    <option value="Monthly">Monthly</option>
-                    <option value="Weekly" selected>Weekly</option>
-                    <option value="Daily">Daily</option>
-                </select>
-            </div>
+                    <select id="time-dropdown">
+                        <option value="Yearly">Yearly</option>
+                        <option value="Monthly">Monthly</option>
+                        <option value="Weekly" selected>Weekly</option>
+                        <option value="Daily">Daily</option>
+                    </select>
+                </div>
 
-            <!--Widget Content-->
-            <div class="widget-entry" id="location-widget-content">
-                <!--Revenue-->
-                <span class="summary-text" id="revenue">
-                    <h3>Revenue: $1,490,045</h3>
-                    <h3 id="percent-change">(+1%)</h3>
-                </span>
+                <!--Widget Content-->
+                <div class="widget-entry" id="location-widget-content">
+                    <!--Revenue-->
+                    <span class="summary-text" id="revenue">
+                        <h3>Revenue: $1,490,045</h3>
+                        <h3 id="percent-change">(+1%)</h3>
+                    </span>
 
-                <!--Packages Delivered-->
-                <span class="summary-text" id="packages-delivered">
-                    <h3>Packages Delivered: 500</h3>
-                    <h3 id="percent-change">(-3%)</h3>
-                </span>
+                    <!--Packages Delivered-->
+                    <span class="summary-text" id="packages-delivered">
+                        <h3>Packages Delivered: 500</h3>
+                        <h3 id="percent-change">(-3%)</h3>
+                    </span>
 
-                <!--Route Compliance-->
-                <span class="summary-text" id="route-compliance">
-                    <h3>Route Compliance: 80%</h3>
-                    <h3 id="percent-change">(+5%)</h3>
-                </span>
+                    <!--Route Compliance-->
+                    <span class="summary-text" id="route-compliance">
+                        <h3>Route Compliance: 80%</h3>
+                        <h3 id="percent-change">(+5%)</h3>
+                    </span>
 
-                <!--Scan Compliance-->
-                <span class="summary-text" id="scan-compliance">
-                    <h3>Scan Compliance: 85%</h3>
-                    <h3 id="percent-change">(+2%)</h3>
-                </span>
+                    <!--Scan Compliance-->
+                    <span class="summary-text" id="scan-compliance">
+                        <h3>Scan Compliance: 85%</h3>
+                        <h3 id="percent-change">(+2%)</h3>
+                    </span>
 
-                <a id="stats-button" href="pages/statistics.html"><i class="icon-32"
-                        data-feather="external-link"></i></a>
-            </div>
-        </section>
+                    <a id="stats-button" href="pages/statistics.html"><i class="icon-32"
+                            data-feather="external-link"></i></a>
+                </div>
+            </section>
+        </div>
 
         <!--Couriers Widget-->
         <section class="widget" id="courier-widget">
@@ -174,6 +177,54 @@
                         <span id="route-compliance">Route Compliance: 95%</span>
 
                         <span id="scan-compliance">Scan Compliance: 90%</span>
+
+                        <button id="details-button"><i class="icon-32" data-feather="external-link"></i></button>
+                    </div>
+                </div>
+
+                <div class="widget-entry">
+                    <div class="courier-entry-grid">
+                        <span id="driver-name">Driver: Homer Simpson (ID: 9032)</span>
+
+                        <span id="route-number">Route: 8943-3412</span>
+
+                        <span id="stops-per-hr">Stops per hr: 1.5</span>
+
+                        <span id="route-compliance">Route Compliance: 85%</span>
+
+                        <span id="scan-compliance">Scan Compliance: 85%</span>
+
+                        <button id="details-button"><i class="icon-32" data-feather="external-link"></i></button>
+                    </div>
+                </div>
+
+                <div class="widget-entry">
+                    <div class="courier-entry-grid">
+                        <span id="driver-name">Driver: Homer Simpson (ID: 9032)</span>
+
+                        <span id="route-number">Route: 8943-3412</span>
+
+                        <span id="stops-per-hr">Stops per hr: 1.5</span>
+
+                        <span id="route-compliance">Route Compliance: 85%</span>
+
+                        <span id="scan-compliance">Scan Compliance: 85%</span>
+
+                        <button id="details-button"><i class="icon-32" data-feather="external-link"></i></button>
+                    </div>
+                </div>
+
+                <div class="widget-entry">
+                    <div class="courier-entry-grid">
+                        <span id="driver-name">Driver: Homer Simpson (ID: 9032)</span>
+
+                        <span id="route-number">Route: 8943-3412</span>
+
+                        <span id="stops-per-hr">Stops per hr: 1.5</span>
+
+                        <span id="route-compliance">Route Compliance: 85%</span>
+
+                        <span id="scan-compliance">Scan Compliance: 85%</span>
 
                         <button id="details-button"><i class="icon-32" data-feather="external-link"></i></button>
                     </div>
