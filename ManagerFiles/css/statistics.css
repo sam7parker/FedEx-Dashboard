@@ -4,7 +4,7 @@
 #desktop-wrapper {
     display: flex;
     flex-direction: column;
-    row-gap: 2;
+    row-gap: 2rem;
 }
 
 #time-dropdown {
@@ -17,6 +17,7 @@
     column-gap: 0.5rem;
 }
 
+/* Statistics Widget*/
 #statistics-widget-content {
     display: grid;
     text-wrap: nowrap;
@@ -32,7 +33,8 @@
         'delivery-exceptions';
 }
 
-
+/* Data for Statistics Widget */
+/* Grid Area Labels*/
 #revenue {grid-area: revenue;}
 #total-routes {grid-area: total-routes;}
 #total-stops {grid-area: total-stops;}
@@ -41,6 +43,7 @@
 #scan-compliance {grid-area: scan-compliance;}
 #delivery-exceptions {grid-area: delivery-exceptions;}
 
+/* Percent Change Colors*/
 #statistics-widget-content #revenue #percent-change {
     color: var(--percent-green)
 }
@@ -61,4 +64,26 @@
 }
 #statistics-widget-content #delivery-exceptions #percent-change {
     color: var(--percent-red)
+}
+
+/* When the page is displayed on a desktop*/
+@media (min-width: 1000px) {
+    main {
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.5rem;
+        justify-content: space-around;
+        align-items: start;
+    }
+    #desktop-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+    }
+
+    .widget-entry {
+        width: 45vw;
+    }
+
 }

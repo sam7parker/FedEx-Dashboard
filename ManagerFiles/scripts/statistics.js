@@ -1,17 +1,16 @@
+// X-Axis for Line Graphs (Route and Scan)
 const xVals_line = [1,5,10,15,20,25,30]
-const yVals_line = [70,80,80,85,86,95,92]
 
+// Route Compliance Graph
 const RouteCompliance = new Chart("RouteCompliance", {
     type: "line",
     data: {
         labels: xVals_line,
         datasets: [{
-            //backgroundColor: "rgba(77,20,140,1.0)",
-            //borderColor: "rgba(255,102,0,1.0",
             label: "Route Compliance",
             backgroundColor: "rgba(255,102,0,0.5",
             borderColor: "rgba(77,20,140,1.0)",
-            data: yVals_line
+            data: [70,80,80,85,86,95,92],
         }]
     },
     options: {
@@ -26,6 +25,33 @@ const RouteCompliance = new Chart("RouteCompliance", {
     }}
   });
 
+// Scan Compliance Graph
+const ScanCompliance = new Chart("ScanCompliance", {
+  type: "line",
+  data: {
+      labels: xVals_line,
+      datasets: [{
+          //backgroundColor: "rgba(77,20,140,1.0)",
+          //borderColor: "rgba(255,102,0,1.0",
+          label: "Route Compliance",
+          backgroundColor: "rgba(255,102,0,0.5",
+          borderColor: "rgba(77,20,140,1.0)",
+          data: [91,86,85,86,89,95,97],
+      }]
+  },
+  options: {
+      scales: {
+      yAxes: [{
+          display: true,
+          ticks: {
+              suggestedMin: 0,
+              suggestedMax: 100
+          }
+      }]
+  }}
+});
+
+// Gross Revenue Graph
 const GrossRevenue = new Chart("GrossRevenue", {
     type: "pie",
     data: {
@@ -42,13 +68,14 @@ const GrossRevenue = new Chart("GrossRevenue", {
                 'rgba(77,20,140,1.0)',
                 'rgba(100,100,100,1.0)'
             ],
-            hoverOffset: 2
+            hoverOffset: 1
         }]
 
     },
     options: {}
 });
 
+// Couriers Scheduled Graph
 const CouriersScheduled = new Chart("CouriersScheduled", {
     type: 'bar',
     
