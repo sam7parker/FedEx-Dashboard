@@ -8,18 +8,98 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Fedex-Statistics</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../css/statistics.css">
+    <link rel="icon" type="image/x-icon" href="../../Resources/images/FedEx_favicon.png">
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <header>
+        <!--Hamburger Menu Open Icon-->
+        <button id="hamburger-input" onclick="HamburgerMenu()">
+            <i class="icon-48 icon-white" data-feather="menu"></i>
+        </button>
 
-    <script src="" async defer></script>
+        <!--Hamburger Menu-->
+        <nav id="hamburger-menu">
+            <!--Hamburger Menu Exit Icon-->
+            <button id="hamburger-input" onclick="HamburgerMenu()">
+                <i class="icon-48 icon-white" data-feather="x"></i>
+            </button>
+
+            <!--Navigation Links-->
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <!--<li><a href="#">Settings</a></li>-->
+            </ul>
+        </nav>
+
+        <img id="logo" name="fedex-logo" src="../../Resources/images/FedEx-logo.svg" />
+
+        <i class="icon-32 icon-white" name="profile-icon" data-feather="user"></i>
+    </header>
+    <main>
+        <div id="desktop-wrapper">
+            <section class="widget">
+                <div class="widget-header">
+                    <h3>OWDA Statistics</h3>
+                    
+                    <select id="time-dropdown">
+                        <option value="Yearly">Yearly</option>
+                        <option value="Monthly">Montly</option>
+                        <option value="Weekly" selected>Weekly</option>
+                        <option value="Daily">Daily</option>
+                    </select>
+                </div>
+                
+                <div class="widget-entry" id="statistics-widget-content">
+                    <span class="summary-text" id="revenue">
+                        <h3>Revenue: $1,490,045</h3>
+                        <h3 id="percent-change">(+1%)</h3>
+                    </span>
+                    <span class="summary-text" id="total-routes">
+                        <h3>Total Routes Scheduled: 500</h3>
+                        <h3 id="percent-change">(+2%)</h3>
+                    </span>
+                    <span class="summary-text" id="total-stops">
+                        <h3>Total Stops Scheduled: 2500</h3>
+                        <h3 id="percent-change">(-1%)</h3>
+                    </span>
+                    <span class="summary-text" id="couriers-scheduled">
+                        <h3>Couriers Scheduled: 12</h3>
+                        <h3 id="percent-change">(-1)</h3>
+                    </span>
+                    <span class="summary-text" id="route-compliance">
+                        <h3>Route Compliance: 86%</h3>
+                        <h3 id="percent-change">(+3%)</h3>
+                    </span>
+                    <span class="summary-text" id="scan-compliance">
+                        <h3>Scan Compliance: 91%</h3>
+                        <h3 id="percent-change">(+5%)</h3>
+                    </span>
+                    <span class="summary-text" id="delivery-exceptions">
+                        <h3>Delivery Exceptions: 25</h3>
+                        <h3 id="percent-change">(-2%)</h3>
+                    </span>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="../../Resources/scripts/base.js" async defer></script>
 </body>
 
 </html>
