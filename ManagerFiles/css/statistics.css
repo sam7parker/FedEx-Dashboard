@@ -1,0 +1,63 @@
+@import "../../Resources/css/navbar.css";
+@import "../../Resources/css/widget.css";
+
+#desktop-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2;
+}
+
+#time-dropdown {
+    margin-top: 0.5rem;
+}
+
+/* Location Summary Widget */
+.summary-text {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+#statistics-widget-content {
+    display: grid;
+    text-wrap: nowrap;
+    row-gap: 1rem;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        'revenue'
+        'total-routes'
+        'total-stops'
+        'couriers-scheduled'
+        'route-compliance'
+        'scan-compliance'
+        'delivery-exceptions';
+}
+
+#revenue {grid-area: revenue;}
+#total-routes {grid-area: total-routes;}
+#total-stops {grid-area: total-stops;}
+#couriers-scheduled {grid-area: couriers-scheduled;}
+#route-compliance {grid-area: route-compliance;}
+#scan-compliance {grid-area: scan-compliance;}
+#delivery-exceptions {grid-area: delivery-exceptions;}
+
+#statistics-widget-content #revenue #percent-change {
+    color: var(--percent-green)
+}
+#statistics-widget-content #total-routes #percent-change {
+    color: var(--percent-green)
+}
+#statistics-widget-content #total-stops #percent-change {
+    color: var(--percent-red)
+}
+#statistics-widget-content #couriers-scheduled #percent-change {
+    color: var(--percent-red)
+}
+#statistics-widget-content #route-compliance #percent-change {
+    color: var(--percent-green)
+}
+#statistics-widget-content #scan-compliance #percent-change {
+    color: var(--percent-green)
+}
+#statistics-widget-content #delivery-exceptions #percent-change {
+    color: var(--percent-red)
+}
