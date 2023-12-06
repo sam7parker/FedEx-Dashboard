@@ -51,9 +51,10 @@
     <main>
         <div id="desktop-wrapper">
             <section class="widget">
+                <!--Statistics Header-->
                 <div class="widget-header">
                     <h3>OWDA Statistics</h3>
-                    
+                    <!--Statistics Dropdown Menu-->
                     <select id="time-dropdown">
                         <option value="Yearly">Yearly</option>
                         <option value="Monthly">Montly</option>
@@ -62,6 +63,7 @@
                     </select>
                 </div>
                 
+                <!--Statistics Widget-->
                 <div class="widget-entry" id="statistics-widget-content">
                     <span class="summary-text" id="revenue">
                         <h3>Revenue: $1,490,045</h3>
@@ -93,13 +95,65 @@
                     </span>
                 </div>
             </section>
+            
+            <!--(Graph) Package Overview-->
+            <section class="widget">    
+                <div class="widget-header">
+                    <h3>Package Overview</h3>
+                </div>
+                <div class="widget-entry">
+                    <canvas id="GrossRevenue" style="width:100%;max-width:50vh;"></canvas>
+                </div>
+            </section>
         </div>
+
+        <!--Graphs for Right Side of Page-->
+        <div id="desktop-wrapper">
+            <!--(Graph) Route Compliance-->
+            <section class="widget">
+                <div class="widget-header">
+                    <h3>Route Compliance</h3>
+                </div>
+                <div class="widget-entry">
+                    <canvas id="RouteCompliance" style="width:100%;max-width:700px"></canvas>
+                </div>
+            </section>
+
+            <!--(Graph) Scan Compliance-->
+            <section class="widget">
+                <div class="widget-header">
+                    <h3>Scan Compliance</h3>
+                </div>
+                <div class="widget-entry">
+                    <canvas id="ScanCompliance" style="width:100%;max-width:700px"></canvas>
+                </div>
+            </section>
+
+            <!--(Graph) Couriers Scheduled-->
+            <section class="widget">    
+                <div class="widget-header">
+                    <h3>Couriers Scheduled</h3>
+                </div>
+                <div class="widget-entry">
+                    <canvas id="CouriersScheduled" style="width:100%;max-width:50vh;"></canvas>
+                </div>
+            </section>
+        </div>
+
+
     </main>
     <script>
         feather.replace();
     </script>
+    
+    <!--Script for JS Charts-->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
 
     <script src="../../Resources/scripts/base.js" async defer></script>
+    <script src="../scripts/statistics.js"></script>
 </body>
 
 </html>
