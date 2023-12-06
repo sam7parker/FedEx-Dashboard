@@ -61,8 +61,10 @@
 
             <!--Widget Content-->
             <div class="widget-entry" id="alert">
-                <i class="icon-24" id="alert-entry-icon" data-feather="alert-triangle"></i>
-                <p id="alert-message">Truck Breakdown: Driver Brian Jones (9447)</p>
+                <span>
+                    <i class="icon-24" id="alert-entry-icon" data-feather="alert-triangle"></i>
+                    <p id="alert-message">Truck Breakdown: Driver Brian Jones (9447)</p>
+                </span>
                 <button id="alert-btn" onclick="ClearAlert()"><i class="icon-24" data-feather="x"></i></button>
             </div>
         </section>
@@ -106,6 +108,89 @@
                     <h3>Scan Compliance: 85%</h3>
                     <h3 id="percent-change">(+2%)</h3>
                 </span>
+            </div>
+        </section>
+
+        <!--Couriers Widget-->
+        <section class="widget" id="courier-widget">
+            <!--Widget Header-->
+            <div class="widget-header">
+                <span id="courier-widget-title">
+                    <h3>Couriers</h3>
+                    <h3>Outbound - 12</h3>
+                </span>
+
+                <span id="courier-widget-options">
+                    <button><i class="icon-32" data-feather="search"></i></button>
+                    <button><i class="icon-32" data-feather="filter"></i></button>
+                </span>
+            </div>
+
+            <!--Widget Content-->
+            <div id="courier-widget-content">
+                <div class="widget-entry" id="alert">
+                    <div class="courier-entry-grid">
+                        <span id="driver-name">Driver: Adam Smith (ID: 1234)</span>
+
+                        <span id="route-number">Route: 0000-0000</span>
+
+                        <span id="stops-per-hr">Stops per hr: 2</span>
+
+                        <span id="route-compliance">Route Compliance: 95%</span>
+
+                        <span id="scan-compliance">Scan Compliance: 70%</span>
+
+                        <button id="details-button"><i class="icon-32" data-feather="external-link"></i></button>
+                    </div>
+                </div>
+
+                <div class="widget-entry" id="alert">
+                    <div class="courier-entry-grid">
+                        <span id="driver-name">Driver: John Doe (ID: 4303)</span>
+
+                        <span id="route-number">Route: 4394-2344</span>
+
+                        <span id="stops-per-hr">Stops per hr: 1</span>
+
+                        <span id="route-compliance">Route Compliance: 95%</span>
+
+                        <span id="scan-compliance">Scan Compliance: 80%</span>
+
+                        <button id="details-button"><i class="icon-32" data-feather="external-link"></i></button>
+                    </div>
+                </div>
+
+                <div class="widget-entry" id="alert">
+                    <div class="courier-entry-grid">
+                        <span id="driver-name">Driver: Mark Snow (ID: 1234)</span>
+
+                        <span id="route-number">Route: 4535-3434</span>
+
+                        <span id="stops-per-hr">Stops per hr: 3</span>
+
+                        <span id="route-compliance">Route Compliance: 95%</span>
+
+                        <span id="scan-compliance">Scan Compliance: 90%</span>
+
+                        <button id="details-button"><i class="icon-32" data-feather="external-link"></i></button>
+                    </div>
+                </div>
+
+                <div class="widget-entry" id="alert">
+                    <div class="courier-entry-grid">
+                        <span id="driver-name">Driver: Homer Simpson (ID: 9032)</span>
+
+                        <span id="route-number">Route: 8943-3412</span>
+
+                        <span id="stops-per-hr">Stops per hr: 1.5</span>
+
+                        <span id="route-compliance">Route Compliance: 85%</span>
+
+                        <span id="scan-compliance">Scan Compliance: 85%</span>
+
+                        <button id="details-button"><i class="icon-32" data-feather="external-link"></i></button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

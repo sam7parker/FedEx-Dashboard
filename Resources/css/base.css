@@ -84,3 +84,7 @@ select#xyz {
 .icon-white {
     color: white;
 }
+
+.grid-column-span-2 {
+    grid-column: span 2;
+}

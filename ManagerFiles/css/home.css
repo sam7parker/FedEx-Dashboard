@@ -1,13 +1,20 @@
 @import "../../Resources/css/navbar.css";
 @import "../../Resources/css/widget.css";
 
-#alerts-widget #alert {
+#alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1rem;
+}
+
+#alert span {
     display: flex;
     align-items: center;
     column-gap: 1rem;
 }
 
-#alerts-widget #alert #alert-entry-icon {
+#alert #alert-entry-icon {
     color: red;
 }
 
@@ -40,4 +47,59 @@
 
 #location-widget-content #scan-compliance #percent-change {
     color: var(--percent-green)
+}
+
+/* Courier Widget */
+#courier-widget-title {
+    margin-left: 1rem;
+}
+
+#courier-widget-options {
+    display: flex;
+    column-gap: 1rem;
+}
+
+#courier-widget-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    overflow: scroll;
+    height: 35vh;
+    padding: 1rem;
+}
+
+.courier-entry-grid {
+    display: grid;
+    font-size: 13px;
+    text-wrap: nowrap;
+    grid-template-columns: repeat(3, 8.5rem);
+    grid-template-rows: repeat(3, 1.5rem);
+    grid-template-areas:
+        'driver-name driver-name driver-name'
+        'route-number route-compliance details-button'
+        'stops-per-hr scan-compliance details-button';
+}
+
+#driver-name {
+    grid-area: driver-name;
+}
+
+#route-number {
+    grid-area: route-number;
+}
+
+#route-compliance {
+    grid-area: route-compliance;
+}
+
+#details-button {
+    grid-area: details-button;
+}
+
+#stops-per-hour {
+    grid-area: stops-per-hour;
+}
+
+#scan-compliance {
+    grid-area: scan-compliance;
 }
