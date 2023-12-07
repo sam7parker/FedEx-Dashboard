@@ -10,37 +10,8 @@
         async
         defer
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Date', 'Route Compliance', 'Scan Compliance'],
-          ['Sun.',   88,     90],
-          ['Mon.',   77,     87],
-          ['Tues.',  91,     88],
-          ['Wed.',   97,     79],
-          ['Thur.',  88,     99],
-          ['Fri.',   99,     89],
-          ['Sat.',   85,     99]
-        ]);
-
-        var options = {
-          title: '',
-          curveType: 'function',
-          legend: { position: 'bottom' },
-          series:{
-            0: {color: '#4D148C'},
-            1: {color: '#f60'},
-          }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }</script>
   </head>
   <body>
     <div class="main-container">
@@ -115,14 +86,14 @@
           </div>
           <div class = "compliance-stats widget">
             <div class="widget-header2"><b>Compliance Stats</b>
-            <select id="statsDropdown">
-              <option value="today">Today</option>
-              <option value="weekly">Weekly</option>
-              <option value="monthly">Monthly</option>
-              <option value="yearly">Yearly</option>
-            </select>
-            </div>
-            <div id="curve_chart"></div>
+              <select id="statsDropdown">
+                <option value="today">Today</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+              </select>
+              </div>
+            <canvas id="combinedCompliance"></canvas>
           </div>
         </div>
         <div class="column-2">
