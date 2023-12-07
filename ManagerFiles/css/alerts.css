@@ -1,0 +1,40 @@
+@import "../../Resources/css/navbar.css";
+@import "../../Resources/css/widget.css";
+
+#page-header {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+
+#alert-top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#alert-top-row span {
+    display: flex;
+    column-gap: 1rem;
+}
+
+#alert-widget-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+@media (min-width: 1000px) {
+    main {
+        padding: 2rem;
+
+        display: flex;
+        column-gap: 1.5rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .widget-entry {
+        width: 45vw;
+    }
+}
