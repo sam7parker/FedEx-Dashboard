@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stop-Details</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/stop_details.css">
+    <link rel="icon" type="image/x-icon" href="../../Resources/images/FedEx_favicon.png">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <header>
+        <!--Hamburger Menu Open Icon-->
+        <button id="hamburger-input" onclick="HamburgerMenu()">
+            <i class="icon-48 icon-white" data-feather="menu"></i>
+        </button>
+
+        <!--Hamburger Menu-->
+        <nav id="hamburger-menu">
+            <!--Hamburger Menu Exit Icon-->
+            <button id="hamburger-input" onclick="HamburgerMenu()">
+                <i class="icon-48 icon-white" data-feather="x"></i>
+            </button>
+
+            <!--Navigation Links-->
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <!--<li><a href="#">Settings</a></li>-->
+            </ul>
+        </nav>
+
+        <img id="logo" name="fedex-logo" src="../../Resources/images/FedEx-logo.svg" />
+
+        <i class="icon-32 icon-white" name="profile-icon" data-feather="user"></i>
+    </header>
+    <main>
+        <div id="desktop-wrapper">
+            <div id="page-header">
+                <a href="courier.html"><i class="icon-32" data-feather="arrow-left"></i></a>
+                <h3>Stop Details</h3>
+            </div>
+        </div>
+
+        <section class="widget">
+            <div class="widget-header">
+                <h3>Current Location</h3>
+            </div>
+            <div class="widget-entry">
+                <div id="map" style="width:100%;height:50vh;"></div>
+            </div>
+        </section>
+
+
+    </main>
+    <script>
+        feather.replace();
+    </script>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyDpPLAVfkyV5UmiZHFK9ElivaJxdphna6g", v: "weekly"});</script>
+      
+    <script src="../../Resources/scripts/base.js" async defer></script>
+    <script src="../scripts/stop_details.js" async defer></script>
+</body>

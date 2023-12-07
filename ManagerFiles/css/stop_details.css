@@ -1,0 +1,13 @@
+@import "../../Resources/css/navbar.css";
+@import "../../Resources/css/widget.css";
+
+#desktop-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#page-header {
+    display: flex;
+    column-gap: 1.5rem;
+}
