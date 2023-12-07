@@ -8,8 +8,15 @@ function ClearAlert() {
 
     div.style.background = "None"
     div.style.textAlign = "Center"
-    div.style.width = "80vw"
     div.style.margin = "0"
+
+    const screen_width = window.innerWidth
+    if (screen_width >= 1000) {
+        div.style.width = "45vw"
+    }
+    else {
+        div.style.width = "80vw"
+    }
 
     msg.innerHTML = "No Alerts..."
     div.append(msg)
