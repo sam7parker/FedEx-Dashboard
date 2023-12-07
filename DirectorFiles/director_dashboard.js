@@ -165,37 +165,37 @@ function updateChartData(timeRange) {
 // Example data for different regions
 const regionData = {
   region1: {
-      shipments: '1500 <span class="percentage">(+5%)</span>',
-      outForDelivery: '200 <span class="percentage">(+2%)</span>',
-      avgDeliveryTime: '1 HR 45 min <span class="percentage">(+4%)</span>',
-      inRoute: '303 <span class="percentage">(+7%)</span>',
-      avgStopTime: '5 min 14 sec <span class="percentage">(+7%)</span>',
-      missedDelivery: '(+4.7%) <span class="percentage">(+5%)</span>',
-  },
-  region2: {
-      shipments: '1800 <span class="percentage">(+8%)</span>',
-      outForDelivery: '450 <span class="percentage">(+3%)</span>',
-      avgDeliveryTime: '2 HR 45 min <span class="percentage">(+3%)</span>',
-      inRoute: '300 <span class="percentage">(+7%)</span>',
-      avgStopTime: '3 min 23 sec <span class="percentage">(+5%)</span>',
-      missedDelivery: '67 <span class="percentage">(+6.7%)</span>',
-  },
-  region3: {
-      shipments: '1200 <span class="percentage">(+5%)</span>',
-      outForDelivery: '350 <span class="percentage">(+1%)</span>',
-      avgDeliveryTime: '1 HR 04 min <span class="percentage">(+9%)</span>',
-      inRoute: '400 <span class="percentage">(+10%)</span>',
-      avgStopTime: '7 min 31 sec <span class="percentage">(+9%)</span>',
-      missedDelivery: '35 <span class="percentage">(+5%)</span>',
-  },
-  overall: {
-      shipments: '2000 <span class="percentage">(+10%)</span>',
-      outForDelivery: '500 <span class="percentage">(+1%)</span>',
-      avgDeliveryTime: '3 HR 23 min <span class="percentage">(+1%)</span>',
-      inRoute: '700 <span class="percentage">(+12%)</span>',
-      avgStopTime: '8 min 13 sec <span class="percentage">(+6.6%)</span>',
-      missedDelivery: '25 <span class="percentage">(+4.2%)</span>',
-  }
+    shipments: '1500 <span class="percentage">(+5%)</span>',
+    outForDelivery: '200 <span class="percentage">(+2%)</span>',
+    avgDeliveryTime: '1 HR 45 min <span class="percentage">(+4%)</span>',
+    inRoute: '303 <span class="percentage">(+7%)</span>',
+    avgStopTime: '5 min 14 sec <span class="percentage">(+7%)</span>',
+    missedDelivery: '(+4.7%) <span class="percentage">(+5%)</span>',
+},
+region2: {
+    shipments: '1800 <span class="percentage">(+8%)</span>',
+    outForDelivery: '450 <span class="percentage">(+3%)</span>',
+    avgDeliveryTime: '2 HR 45 min <span class="percentage">(+3%)</span>',
+    inRoute: '300 <span class="percentage">(+7%)</span>',
+    avgStopTime: '3 min 23 sec <span class="percentage">(+5%)</span>',
+    missedDelivery: '67 <span class="percentage">(+6.7%)</span>',
+},
+region3: {
+    shipments: '1200 <span class="percentage">(+5%)</span>',
+    outForDelivery: '350 <span class="percentage">(+1%)</span>',
+    avgDeliveryTime: '1 HR 04 min <span class="percentage">(+9%)</span>',
+    inRoute: '400 <span class="percentage">(+10%)</span>',
+    avgStopTime: '7 min 31 sec <span class="percentage">(+9%)</span>',
+    missedDelivery: '35 <span class="percentage">(+5%)</span>',
+},
+overall: {
+    shipments: '2000 <span class="percentage">(+10%)</span>',
+    outForDelivery: '500 <span class="percentage">(+1%)</span>',
+    avgDeliveryTime: '3 HR 23 min <span class="percentage">(+1%)</span>',
+    inRoute: '700 <span class="percentage">(+12%)</span>',
+    avgStopTime: '8 min 13 sec <span class="percentage">(+6.6%)</span>',
+    missedDelivery: '25 <span class="percentage">(+4.2%)</span>',
+}
 };
 
 document.getElementById('regionSelect').addEventListener('change', function(e) {
