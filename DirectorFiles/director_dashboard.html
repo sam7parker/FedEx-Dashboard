@@ -10,37 +10,8 @@
         async
         defer
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Date', 'Route Compliance', 'Scan Compliance'],
-          ['Sun.',   88,     90],
-          ['Mon.',   77,     87],
-          ['Tues.',  91,     88],
-          ['Wed.',   97,     79],
-          ['Thur.',  88,     99],
-          ['Fri.',   99,     89],
-          ['Sat.',   85,     99]
-        ]);
-
-        var options = {
-          title: '',
-          curveType: 'function',
-          legend: { position: 'bottom' },
-          series:{
-            0: {color: '#4D148C'},
-            1: {color: '#f60'},
-          }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }</script>
   </head>
   <body>
     <div class="main-container">
@@ -52,8 +23,8 @@
       </div>
       <div class="header-right">
         <img src="user.svg" class="profile-img"/>
-        <div class="name-container">
-          <div class="director-name-button">
+        <!--<div class="name-container">
+          <div class="director-name-button">-->
             <div class="dropdown">
                 <button>(Director Name)
                     <img src="OrangeButton.svg" class="orange-dropdown"/>
@@ -65,8 +36,8 @@
                   <a href="../index.html">Logout</a>
                 </div>
               </div>
-          </div>
-        </div>
+          <!--</div>
+        </div>-->
       </div>
     </div>
     <div class="body-outline">
@@ -77,52 +48,52 @@
               <label for="regionSelect">Region:</label>
               <select id="regionSelect">
                 <option value = "overall" selected >Overall</option>
-                <option value = "region1">1</option>
-                <option value = "region2">2</option>
-                <option value = "region3">3</option>
+                <option value = "region1">North</option>
+                <option value = "region2">South</option>
+                <option value = "region3">West</option>
               </select>
             </div>
             <div class="stats-pair-one">
               <div class="stats-widget widget">
                 <div class="widget-header">Shipments:</div>
-                <div class="stats-value">2000<span>+10%</span></div>
+                <div class="stats-value">2000<span>(+10%)</span></div>
               </div>
               <div class="stats-widget widget">
                 <div class="widget-header">Out for Delivery:</div>
-                <div class="stats-value">500<span>+1%</span></div>
+                <div class="stats-value">500<span>(+1%)</span></div>
               </div>
             </div>
             <div class="stats-pair-two">
               <div class="stats-widget widget">
                 <div class="widget-header">Avg Delivery Time:</div>
-                <div class="stats-value">3hr 55 min<span>-5%</span></div>
+                <div class="stats-value">3hr 55 min<span>(+5%)</span></div>
               </div>
               <div class="stats-widget widget">
                 <div class="widget-header">In Route:</div>
-                <div class="stats-value">600<span>-2%</span></div>
+                <div class="stats-value">600<span>(+2%)</span></div>
               </div>
             </div>
             <div class="stats-pair-three">
               <div class="stats-widget widget">
                 <div class="widget-header">Avg. Stop Time:</div>
-                <div class="stats-value">5 min 21 sec<span>+9%</span></div>
+                <div class="stats-value">5 min 21 sec<span>(+9%)</span></div>
               </div>
               <div class="stats-widget widget">
                 <div class="widget-header">Missed Delivery:</div>
-                <div class="stats-value">35 <span>+2%</span></div>
+                <div class="stats-value">35 <span>(+2%)</span></div>
               </div>
             </div>
           </div>
           <div class = "compliance-stats widget">
             <div class="widget-header2"><b>Compliance Stats</b>
-            <select id="statsDropdown">
-              <option value="today">Today</option>
-              <option value="weekly">Weekly</option>
-              <option value="monthly">Monthly</option>
-              <option value="yearly">Yearly</option>
-            </select>
-            </div>
-            <div id="curve_chart"></div>
+              <select id="statsDropdown">
+                <option value="today">Today</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+              </select>
+              </div>
+            <canvas id="combinedCompliance"></canvas>
           </div>
         </div>
         <div class="column-2">
@@ -131,6 +102,31 @@
               <div class="div-25">
                 <div class="column-3"><div class="districts widget">
                   <div class="widget-header2"><b>Districts</b></div>
+                  <div id="district-widget-content">
+                  <div class="district-entry">
+                    <div class="district-entry-grid">
+                      <span id = "district-name">District: Founder</span>
+                      <span id = "location-name">Location: OWDA</span>
+                      <span id = "senior-management-name">Senior Management: Luke Richardson</span>
+                    </div>
+                  </div>
+
+                  <div class="district-entry">
+                    <div class="district-entry-grid">
+                      <span id = "district-name">District: Founder</span>
+                      <span id = "location-name">Location: CEFA</span>
+                      <span id = "senior-management-name">Senior Management: Clayton Curtis</span>
+                    </div>
+                  </div>
+
+                  <div class="district-entry">
+                    <div class="district-entry-grid">
+                      <span id = "district-name">District: High Rise</span>
+                      <span id = "location-name">Location: NYCA</span>
+                      <span id = "senior-management-name">Senior Management: Andre Hunter</span>
+                    </div>
+                  </div>
+                  </div>
                 </div></div>
                 <div class="column-4"><div class="updates widget">
                   <div class="widget-header2"><b>Updates</b></div>
