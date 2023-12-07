@@ -34,7 +34,7 @@ const ScanCompliance = new Chart("ScanCompliance", {
         datasets: [{
             //backgroundColor: "rgba(77,20,140,1.0)",
             //borderColor: "rgba(255,102,0,1.0",
-            label: "Route Compliance",
+            label: "Scan Compliance",
             backgroundColor: "rgba(255,102,0,0.5",
             borderColor: "rgba(77,20,140,1.0)",
             data: [91, 86, 85, 86, 89, 95, 97],
