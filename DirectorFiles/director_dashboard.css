@@ -122,7 +122,7 @@
   object-fit: contain;
   object-position: center;
   width: 22px;
-  fill: #f60;
+  fill: #4D148C;
   overflow: hidden;
   margin-top: 5px;
   max-width: 100%;
@@ -357,10 +357,11 @@ button{
   padding:10px 20px;
   font-size:18px;
   cursor:pointer;
+  background-color: rgb(255, 134, 54);
 }
 
 button:hover{
-  background-color:#ddd;
+  background-color:rgb(255, 134, 54);
 }
 
 .dropdown-options {
@@ -410,7 +411,7 @@ button:hover{
 #statsDropdown {
   padding: 5px;
   font-size: 15px;
-  background-color: rgb(255, 102, 0); /* Change the background color to orange */
+  background-color: rgb(255, 134, 54); /* Change the background color to orange */
   border-radius: 5px;
   float:right;
   margin: 0 20px 0 0;
@@ -480,7 +481,7 @@ button:hover{
   }
 
   .district-entry:hover {
-    background-color: purple;
+    background-color: #4D148C;
     color: white;
   }
 
@@ -490,3 +491,4 @@ button:hover{
       margin-left: 3px;
   }
 }
+
