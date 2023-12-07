@@ -1,17 +1,62 @@
 @import "../../Resources/css/navbar.css";
 @import "../../Resources/css/widget.css";
 
-#desktop-wrapper {
+#page-header {
+    display: flex;
+    justify-content: start;
+    column-gap: 25%;
+}
+
+#page-header h3 {
+    margin-bottom: 0.5rem;
+}
+
+#stop-widget-details {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
 }
 
-#page-header {
+#stop-widget-details-row1 {
     display: flex;
-    column-gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#map-center {
-    justify-content: center;
+@media (min-width: 1000px) {
+    main {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+    }
+
+    #page-header {
+        text-wrap: nowrap;
+        column-gap: 0%;
+    }
+
+    #page-header h3 {
+        margin-left: 42.7vw;
+    }
+
+    #desktop-wrapper {
+        display: flex;
+        column-gap: 2rem;
+    }
+
+    #stop-widget {
+        flex-direction: row;
+        column-gap: 2rem;
+    }
+
+    #stop-widget-details {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .widget-entry {
+        width: 45vw;
+    }
 }

@@ -33,11 +33,8 @@
             <!--Navigation Links-->
             <ul>
                 <li><a href="../home.html">Home</a></li>
-                <li><a href="history.html">History</a></li>
                 <li><a href="statistics.html">Statistics</a></li>
                 <li><a href="alerts.html">Alerts</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <!--<li><a href="#">Settings</a></li>-->
             </ul>
         </nav>
 
@@ -45,39 +42,60 @@
 
         <i class="icon-32 icon-white" name="profile-icon" data-feather="user"></i>
     </header>
+
     <main>
-        <div id="desktop-wrapper">
-            <div id="page-header">
-                <a href="courier.html"><i class="icon-32" data-feather="arrow-left"></i></a>
-                <h3>Stop Details</h3>
-            </div>
+        <div id="page-header">
+            <a href="courier.html"><i class="icon-32" data-feather="arrow-left"></i></a>
+            <h3>Stop Details</h3>
         </div>
 
-        <section class="widget">
-            <div class="widget-header">
-                <h3>Current Location</h3>
-            </div>
-            <div class="widget-entry" id="map-center">
-                <div id="map" style="width:100%;height:50vh;"></div>
-            </div>
-        </section>
-        <section class="widget">
-            <div class="widget-header">
-                <h3>Stop Data</h3>
-            </div>
-            <div class="widget-entry">
-                <h3> Yo Mama</h3>
-            </div>
-        </section>
+        <div id="desktop-wrapper">
+            <section class="widget" id="map-widget">
+                <!--Widget Content-->
+                <div class="widget-entry">
+                    <div id="map" style="width:100%;height:50vh;"></div>
+                </div>
+            </section>
 
+            <section class="widget" id="stop-widget">
+                <div class="widget-entry" id="stop-widget-details">
+                    <div id="stop-widget-details-row1">
+                        <span>
+                            <h3>123 Main Street</h3>
+                            <h3>Starkville, MS 56789</h3>
+                        </span>
 
+                        <i class="icon-32" data-feather="flag"></i>
+                    </div>
+
+                    <div id="stop-widget-details-row2">
+                        <h3>Tracking Id: RA054107345US</h3>
+                        <h3>Route #: 1234-9858</h3>
+                        <h3>Stop #: 5432-1234</h3>
+                    </div>
+
+                    <div id="stop-widget-details-row3">
+                        <h3>Package Type: Residential</h3>
+                        <h3>Package Count: 1</h3>
+                    </div>
+
+                    <div id="stop-widget-details-row4">
+                        <span>
+                            <h3>Departure Time: 10:00 AM</h3>
+                            <h3>Est. Arrival Time: 10:30 AM</h3>
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+
     <script>
         feather.replace();
     </script>
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyDpPLAVfkyV5UmiZHFK9ElivaJxdphna6g", v: "weekly"});</script>
-      
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyDpPLAVfkyV5UmiZHFK9ElivaJxdphna6g", v: "weekly" });</script>
+
     <script src="../../Resources/scripts/base.js" async defer></script>
     <script src="../scripts/stop_details.js" async defer></script>
 </body>
