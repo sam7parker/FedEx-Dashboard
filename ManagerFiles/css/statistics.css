@@ -33,35 +33,79 @@
         'delivery-exceptions';
 }
 
+/* Package Widget */
+#package-widget-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+#package-widget-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+#package-widget-info div {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
 /* Data for Statistics Widget */
 /* Grid Area Labels*/
-#revenue {grid-area: revenue;}
-#total-routes {grid-area: total-routes;}
-#total-stops {grid-area: total-stops;}
-#couriers-scheduled {grid-area: couriers-scheduled;}
-#route-compliance {grid-area: route-compliance;}
-#scan-compliance {grid-area: scan-compliance;}
-#delivery-exceptions {grid-area: delivery-exceptions;}
+#revenue {
+    grid-area: revenue;
+}
+
+#total-routes {
+    grid-area: total-routes;
+}
+
+#total-stops {
+    grid-area: total-stops;
+}
+
+#couriers-scheduled {
+    grid-area: couriers-scheduled;
+}
+
+#route-compliance {
+    grid-area: route-compliance;
+}
+
+#scan-compliance {
+    grid-area: scan-compliance;
+}
+
+#delivery-exceptions {
+    grid-area: delivery-exceptions;
+}
 
 /* Percent Change Colors*/
 #statistics-widget-content #revenue #percent-change {
     color: var(--percent-green)
 }
+
 #statistics-widget-content #total-routes #percent-change {
     color: var(--percent-green)
 }
+
 #statistics-widget-content #total-stops #percent-change {
     color: var(--percent-red)
 }
+
 #statistics-widget-content #couriers-scheduled #percent-change {
     color: var(--percent-red)
 }
+
 #statistics-widget-content #route-compliance #percent-change {
     color: var(--percent-green)
 }
+
 #statistics-widget-content #scan-compliance #percent-change {
     color: var(--percent-green)
 }
+
 #statistics-widget-content #delivery-exceptions #percent-change {
     color: var(--percent-red)
 }
@@ -76,14 +120,20 @@
         justify-content: space-around;
         align-items: start;
     }
+
     #desktop-wrapper {
         display: flex;
         flex-direction: column;
-        row-gap: 5rem;
+        row-gap: 2rem;
     }
 
     .widget-entry {
         width: 45vw;
     }
 
+    #package-widget-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }

@@ -62,7 +62,7 @@
                         <option value="Daily">Daily</option>
                     </select>
                 </div>
-                
+
                 <!--Statistics Widget-->
                 <div class="widget-entry" id="statistics-widget-content">
                     <span class="summary-text" id="revenue">
@@ -95,19 +95,42 @@
                     </span>
                 </div>
             </section>
-            
+
             <!--(Graph) Package Overview-->
-            <section class="widget">    
+            <section class="widget" id="package-widget">
                 <div class="widget-header">
                     <h3>Package Overview</h3>
                 </div>
-                <div class="widget-entry">
+
+                <div class="widget-entry" id="package-widget-content">
                     <canvas id="GrossRevenue" style="width:100%;max-width:50vh;"></canvas>
+
+                    <span id="package-widget-info">
+                        <div>
+                            <h3>Total Packages:</h3>
+                            <h3>2,500</h3>
+                        </div>
+
+                        <div>
+                            <h3>Packages Delivered:</h3>
+                            <h3 class="text-orange">1,500</h3>
+                        </div>
+
+                        <div>
+                            <h3>Packages Out For Delivery:</h3>
+                            <h3 class="text-purple">800</h3>
+                        </div>
+
+                        <div>
+                            <h3>Packages with Exceptions:</h3>
+                            <h3 class="text-dark-grey">200</h3>
+                        </div>
+                    </span>
                 </div>
             </section>
 
             <!--(Graph) Couriers Scheduled-->
-            <section class="widget">    
+            <section class="widget">
                 <div class="widget-header">
                     <h3>Couriers Scheduled</h3>
                 </div>
@@ -145,10 +168,9 @@
     <script>
         feather.replace();
     </script>
-    
+
     <!--Script for JS Charts-->
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
 
 

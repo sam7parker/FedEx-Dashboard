@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
 :root {
-    --purple: #7A0BD1;
-    --orange: #ff7A08;
-    --grey: #EAEDF2;
+    --purple: rgba(77, 20, 140, 1.0);
+    --orange: rgba(255, 102, 0, 1.0);
+    --dark-grey: rgba(100, 100, 100, 1.0);
+    --grey: rgb(233, 236, 241);
     --percent-green: #3AA738;
     --percent-red: #ED2020;
     --widget-radius: 10px;
@@ -108,4 +109,16 @@ select#xyz {
 
 .variance {
     color: rgb(230, 109, 109);
+}
+
+.text-orange {
+    color: var(--orange);
+}
+
+.text-purple {
+    color: var(--purple);
+}
+
+.text-dark-grey {
+    color: var(--dark-grey);
 }
