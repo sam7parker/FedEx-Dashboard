@@ -23,6 +23,10 @@ header {
     box-sizing: border-box;
 }
 
+#logo {
+    max-height: 50px;
+}
+
 #hamburger-menu button {
     margin-top: 1rem;
     margin-left: 0.5rem;
