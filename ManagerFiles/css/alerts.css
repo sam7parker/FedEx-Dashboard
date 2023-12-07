@@ -50,4 +50,9 @@
     .widget-entry {
         width: 45vw;
     }
+
+    #clear-all-alerts-btn {
+        margin-left: 0;
+        width: 20%;
+    }
 }
