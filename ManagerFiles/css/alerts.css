@@ -24,6 +24,19 @@
     row-gap: 1rem;
 }
 
+#clear-all-alerts-btn {
+    background-color: var(--orange);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 25%;
+
+    color: white;
+    font-weight: bold;
+    font-family: 'Futura';
+    font-size: 20px;
+}
+
 @media (min-width: 1000px) {
     main {
         padding: 2rem;

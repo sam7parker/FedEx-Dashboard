@@ -20,8 +20,8 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header>
-            <!--Hamburger Menu Open Icon-->
+    <header>
+        <!--Hamburger Menu Open Icon-->
         <button id="hamburger-input" onclick="HamburgerMenu()">
             <i class="icon-48 icon-white" data-feather="menu"></i>
         </button>
@@ -44,71 +44,73 @@
         <img id="logo" name="fedex-logo" src="../../Resources/images/fedexlogo_wo.png" />
 
         <i class="icon-32 icon-white" name="profile-icon" data-feather="user"></i>
-        </header>
-        
-        
-        
-        <main>
-            <!--Alerts Title-->
-            <section id="page-header">
-                <h3>Alerts</h3>
-            </section>
-            
-            <!--Alerts Widgets-->
-            <section class="widget">
-                <div class="widget-entry" id="alert-widget-content">
-                    <div id="alert-top-row">
-                        <span>
-                            <i class="icon-32" data-feather="cloud-drizzle"></i>
-                            <p>Thunderstorm Starkville, MS</p>
-                        </span>
-                        <p>9:30 A.M. - 10:30 A.M.</p>
-                    </div>
-                    <p>
-                        A Tornado Warning is in effect at your current location. Please seek shelter immediately. Your safety matters!
-                    </p>
+    </header>
+
+
+
+    <main>
+        <!--Alerts Title-->
+        <section id="page-header">
+            <h3>Alerts</h3>
+        </section>
+
+        <!--Alerts Widgets-->
+        <section class="widget">
+            <div class="widget-entry" id="alert-widget-content">
+                <div id="alert-top-row">
+                    <span>
+                        <i class="icon-32" data-feather="cloud-drizzle"></i>
+                        <p>Thunderstorm Starkville, MS</p>
+                    </span>
+                    <p>9:30 A.M. - 10:30 A.M.</p>
                 </div>
-            </section>
+                <p>
+                    A Tornado Warning is in effect at your current location. Please seek shelter immediately. Your
+                    safety matters!
+                </p>
+            </div>
+        </section>
 
-            <section class="widget">
-                <div class="widget-entry" id="alert-widget-content">
-                    <div id="alert-top-row">
-                        <span>
-                            <i class="icon-32" data-feather="alert-triangle"></i>
-                            <p>Highway Congestion I-65 Starkville, MS</p>
-                        </span>
-                        <p>9:30 A.M. - 10:30 A.M.</p>
-                    </div>
-                    <p>
-                        There is heavy traffic on Interstate 75. Follow detours or expect a delay of 30 minutes.
-                    </p>
+        <section class="widget">
+            <div class="widget-entry" id="alert-widget-content">
+                <div id="alert-top-row">
+                    <span>
+                        <i class="icon-32" data-feather="alert-triangle"></i>
+                        <p>Highway Congestion I-65 Starkville, MS</p>
+                    </span>
+                    <p>9:30 A.M. - 10:30 A.M.</p>
                 </div>
-            </section>
+                <p>
+                    There is heavy traffic on Interstate 75. Follow detours or expect a delay of 30 minutes.
+                </p>
+            </div>
+        </section>
 
-            <section class="widget">
-                <div class="widget-entry" id="alert-widget-content">
-                    <div id="alert-top-row">
-                        <span>
-                            <i class="icon-32" data-feather="package"></i>
-                            <p>Courier Delay #234334</p>
-                        </span>
-                        <p>9:30 A.M. - 10:30 A.M.</p>
-                    </div>
-                    <p>
-                        Courier #234334 delayed due to unforeseen circumstances. Please send route update.
-                    </p>
+        <section class="widget">
+            <div class="widget-entry" id="alert-widget-content">
+                <div id="alert-top-row">
+                    <span>
+                        <i class="icon-32" data-feather="package"></i>
+                        <p>Courier Delay #234334</p>
+                    </span>
+                    <p>9:30 A.M. - 10:30 A.M.</p>
                 </div>
-            </section>
+                <p>
+                    Courier #234334 delayed due to unforeseen circumstances. Please send route update.
+                </p>
+            </div>
+        </section>
 
-        </main>
+        <button id="clear-all-alerts-btn" onclick="ClearAllAlerts()">Clear</button>
+    </main>
 
 
-        <script>
-            feather.replace();
-        </script>
-    
-        <script src="../../Resources/scripts/base.js" async defer></script>
-        <script src="index.js" async defer></script>
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="../../Resources/scripts/base.js" async defer></script>
+    <script src="../scripts/alerts.js" async defer></script>
 </body>
 
 </html>
