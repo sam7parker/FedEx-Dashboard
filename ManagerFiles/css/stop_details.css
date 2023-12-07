@@ -11,3 +11,7 @@
     display: flex;
     column-gap: 1.5rem;
 }
+
+#map-center {
+    justify-content: center;
+}
