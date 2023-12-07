@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FedEx Director Dashboard</title>
+    <link rel="stylesheet" href="director_dashboard.css"/>
+    <link rel="stylesheet" href="district_stats.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div class="main-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="Hamburger_icon.png" class="hamburger"/>
+        <img src="fedexlogo.png" class="fxlogo"/>
+        <div id ="liveTime"></div>
+      </div>
+      <div class="header-right">
+        <img src="user.svg" class="profile-img"/>
+        <!--<div class="name-container">
+          <div class="director-name-button">-->
+            <div class="dropdown">
+                <button>(Director Name)
+                    <img src="OrangeButton.svg" class="orange-dropdown"/>
+                </button>
+                <div class="dropdown-options">
+                  <a href="#">Account</a>
+                  <a href="#">Payment</a>
+                  <a href="#">Schedule</a>
+                  <a href="../index.html">Logout</a>
+                </div>
+              </div>
+          <!--</div>
+        </div>-->
+      </div>
+    </div>
+    <main>
+        <!--For Current Stop and Route Compliance Widgets for Desktop-->
+        <div id="desktop-wrapper">
+            <div id="page-header">
+                <a href="director_dashboard.html"><i class="icon-32" data-feather="arrow-left"></i></a>
+                <h3>District: Founder</h3>
+            </div>
+
+            <!--Current Stop Widget-->
+            <section class="widget" id="current-stop-widget">
+                <h3>Information</h3>
+
+                <div class="widget-entry" id="current-stop-widget-content">
+                    <span id="current-stop-info">
+                        <p>Location: OWDA</p>
+                        <p>Senior Management: Luke Richardson</p>
+                    </span>
+
+                    <span id="current-stop-icons">
+                        <img src="../../Resources/images/Express Icon.png" />
+                        <a href="stop_details.html"><i class="icon-32" data-feather="external-link"></i></a>
+                    </span>
+                </div>
+            </section>
+
+            <!--Route Compliance Widget-->
+            <section class="widget" id="route-compliance-widget">
+                <h3>Route Compliance - 95%</h3>
+
+                <!--Widget Content-->
+                <div class="widget-entry" id="route-compliance-widget-content">
+                    <!--Route Details-->
+                    <span>
+                        <p>Route #: 1234-9858</p>
+                        <p>Package Count: 45</p>
+                    </span>
+
+                    <!--Color key for stop values-->
+                    <span id="route-definition">
+                        <p class="planned">Planned</p>
+                        <p>|</p>
+                        <p class="actual">Actual</p>
+                        <p>|</p>
+                        <p class="variance">Variance</p>
+                    </span>
+
+                    <!--Stops-->
+                    <span>
+                        <div class="key">
+                            <p>Stops per Hour:</p>
+
+                            <span class="value">
+                                <p class="planned">123</p>
+                                <p>|</p>
+                                <p class="actual">123</p>
+                                <p>|</p>
+                                <p class="variance">123</p>
+                            </span>
+                        </div>
+
+                        <div class="key">
+                            <p>Stop Duration:</p>
+
+                            <span class="value">
+                                <p class="planned">123</p>
+                                <p>|</p>
+                                <p class="actual">123</p>
+                                <p>|</p>
+                                <p class="variance">123</p>
+                            </span>
+                        </div>
+
+                        <div class="key">
+                            <p>Between-Stop:</p>
+
+                            <span class="value">
+                                <p class="planned">123</p>
+                                <p>|</p>
+                                <p class="actual">123</p>
+                                <p>|</p>
+                                <p class="variance">123</p>
+                            </span>
+                        </div>
+                    </span>
+
+                    <!--Area Durations-->
+                    <span>
+                        <div class="key">
+                            <p>To Area Duration:</p>
+
+                            <span class="value">
+                                <p class="planned">123</p>
+                                <p>|</p>
+                                <p class="actual">123</p>
+                                <p>|</p>
+                                <p class="variance">123</p>
+                            </span>
+                        </div>
+
+                        <div class="key">
+                            <p>From Area Duration:</p>
+
+                            <span class="value">
+                                <p class="planned">123</p>
+                                <p>|</p>
+                                <p class="actual">123</p>
+                                <p>|</p>
+                                <p class="variance">123</p>
+                            </span>
+                        </div>
+                    </span>
+
+                    <!--Leave Times-->
+                    <span>
+                        <div class="key">
+                            <p>Leave Building Time:</p>
+
+                            <span class="value">
+                                <p class="planned">123</p>
+                                <p>|</p>
+                                <p class="actual">123</p>
+                                <p>|</p>
+                                <p class="variance">123</p>
+                            </span>
+                        </div>
+
+                        <div class="key">
+                            <p>Return Building Time:</p>
+
+                            <span class="value">
+                                <p class="planned">123</p>
+                                <p>|</p>
+                                <p class="actual">123</p>
+                                <p>|</p>
+                                <p class="variance">123</p>
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </section>
+        </div>
+
+        <!--Scan Compliance Widget-->
+        <section class="widget" id="scan-compliance-widget">
+            <div class="widget-header">
+                <h3>Scan Compliance - 70%</h3>
+
+                <span id="scan-compliance-widget-options">
+                    <button><i class="icon-32" data-feather="search"></i></button>
+                    <button><i class="icon-32" data-feather="filter"></i></button>
+                </span>
+            </div>
+
+            <div id="scan-compliance-widget-content">
+                <div class="widget-entry scan-entry">
+                    <span>
+                        <p>Stop #: 4344-5049</p>
+                        <p>DIST From Customer: 270 ft</p>
+                    </span>
+
+                    <span>
+                        <p>Compliance: 0%</p>
+                        <p>Scan Type: PUX</p>
+                    </span>
+                </div>
+
+                <div class="widget-entry scan-entry">
+                    <span>
+                        <p>Stop #: 1244-6757</p>
+                        <p>DIST From Customer: 50 ft</p>
+                    </span>
+
+                    <span>
+                        <p>Compliance: 80%</p>
+                        <p>Scan Type: PUP</p>
+                    </span>
+                </div>
+
+                <div class="widget-entry scan-entry">
+                    <span>
+                        <p>Stop #: 4344-5049</p>
+                        <p>DIST From Customer: 10 ft</p>
+                    </span>
+
+                    <span>
+                        <p>Compliance: 100%</p>
+                        <p>Scan Type: POD</p>
+                    </span>
+                </div>
+
+                <div class="widget-entry scan-entry">
+                    <span>
+                        <p>Stop #: 4344-5049</p>
+                        <p>DIST From Customer: 10 ft</p>
+                    </span>
+
+                    <span>
+                        <p>Compliance: 100%</p>
+                        <p>Scan Type: POD</p>
+                    </span>
+                </div>
+
+                <div class="widget-entry scan-entry">
+                    <span>
+                        <p>Stop #: 4344-5049</p>
+                        <p>DIST From Customer: 10 ft</p>
+                    </span>
+
+                    <span>
+                        <p>Compliance: 100%</p>
+                        <p>Scan Type: POD</p>
+                    </span>
+                </div>
+
+                <div class="widget-entry scan-entry">
+                    <span>
+                        <p>Stop #: 4344-5049</p>
+                        <p>DIST From Customer: 10 ft</p>
+                    </span>
+
+                    <span>
+                        <p>Compliance: 100%</p>
+                        <p>Scan Type: POD</p>
+                    </span>
+                </div>
+
+                <div class="widget-entry scan-entry">
+                    <span>
+                        <p>Stop #: 4344-5049</p>
+                        <p>DIST From Customer: 10 ft</p>
+                    </span>
+
+                    <span>
+                        <p>Compliance: 100%</p>
+                        <p>Scan Type: POD</p>
+                    </span>
+                </div>
+
+                <div class="widget-entry scan-entry">
+                    <span>
+                        <p>Stop #: 4344-5049</p>
+                        <p>DIST From Customer: 10 ft</p>
+                    </span>
+
+                    <span>
+                        <p>Compliance: 100%</p>
+                        <p>Scan Type: POD</p>
+                    </span>
+                </div>
+
+                <div class="widget-entry scan-entry">
+                    <span>
+                        <p>Stop #: 4344-5049</p>
+                        <p>DIST From Customer: 10 ft</p>
+                    </span>
+
+                    <span>
+                        <p>Compliance: 100%</p>
+                        <p>Scan Type: POD</p>
+                    </span>
+                </div>
+
+                <div class="widget-entry scan-entry">
+                    <span>
+                        <p>Stop #: 4344-5049</p>
+                        <p>DIST From Customer: 10 ft</p>
+                    </span>
+
+                    <span>
+                        <p>Compliance: 100%</p>
+                        <p>Scan Type: POD</p>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="../../Resources/scripts/base.js" async defer></script>
+    <script src="index.js" async defer></script>
+</body>
+
+</html>

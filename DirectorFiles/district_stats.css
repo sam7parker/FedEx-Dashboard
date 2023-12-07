@@ -1,0 +1,101 @@
+@import "../../Resources/css/navbar.css";
+@import "../../Resources/css/widget.css";
+
+#desktop-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#page-header {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+/* Current Stop Widget */
+#current-stop-widget-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#current-stop-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#current-stop-icons {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+/*Route Compliance Widget*/
+#route-compliance-widget {
+    margin-top: 1rem;
+}
+
+#route-compliance-widget-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#route-definition {
+    display: flex;
+    column-gap: 0.5rem;
+    margin-left: 20%;
+}
+
+.key {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.value {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+#scan-compliance-widget-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    overflow: scroll;
+    max-height: 35vh;
+}
+
+.scan-entry {
+    display: flex;
+    column-gap: 1rem;
+}
+
+@media (min-width: 1000px) {
+    main {
+        padding: 2rem;
+
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.5rem;
+        justify-content: space-around;
+        align-items: start;
+    }
+
+    .widget-entry {
+        width: 45vw;
+    }
+
+    .scan-entry {
+        justify-content: space-between;
+    }
+
+    #route-definition {
+        margin-left: 0%;
+    }
+
+    #scan-compliance-widget-content {
+        margin-top: 3rem;
+        max-height: 75vh;
+    }
+}
