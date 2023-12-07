@@ -165,36 +165,36 @@ function updateChartData(timeRange) {
 // Example data for different regions
 const regionData = {
   region1: {
-      shipments: '1500 (+5%)',
-      outForDelivery: '200 (+2%)',
-      avgDeliveryTime: '1 HR 45 min',
-      inRoute: '303',
-      avgStopTime: '5 min 14 sec (+7%)',
-      missedDelivery: '17 (+4.7%)'
+      shipments: '1500 <span class="percentage">(+5%)</span>',
+      outForDelivery: '200 <span class="percentage">(+2%)</span>',
+      avgDeliveryTime: '1 HR 45 min <span class="percentage">(+4%)</span>',
+      inRoute: '303 <span class="percentage">(+7%)</span>',
+      avgStopTime: '5 min 14 sec <span class="percentage">(+7%)</span>',
+      missedDelivery: '(+4.7%) <span class="percentage">(+5%)</span>',
   },
   region2: {
-      shipments: '1800 (+8%)',
-      outForDelivery: '450 (+3%)',
-      avgDeliveryTime: '2 HR 45 min',
-      inRoute: '300',
-      avgStopTime: '3 min 23 sec (+7%)',
-      missedDelivery: '67 (+6.7%)'
+      shipments: '1800 <span class="percentage">(+8%)</span>',
+      outForDelivery: '450 <span class="percentage">(+3%)</span>',
+      avgDeliveryTime: '2 HR 45 min <span class="percentage">(+3%)</span>',
+      inRoute: '300 <span class="percentage">(+7%)</span>',
+      avgStopTime: '3 min 23 sec <span class="percentage">(+5%)</span>',
+      missedDelivery: '67 <span class="percentage">(+6.7%)</span>',
   },
   region3: {
-      shipments: '1200 (+4%)',
-      outForDelivery: '350 (+1%)',
-      avgDeliveryTime: '1 HR 04 min',
-      inRoute: '400',
-      avgStopTime: '7 min 31 sec (+9%)',
-      missedDelivery: '35 (+5%)'
+      shipments: '1200 <span class="percentage">(+5%)</span>',
+      outForDelivery: '350 <span class="percentage">(+1%)</span>',
+      avgDeliveryTime: '1 HR 04 min <span class="percentage">(+9%)</span>',
+      inRoute: '400 <span class="percentage">(+10%)</span>',
+      avgStopTime: '7 min 31 sec <span class="percentage">(+9%)</span>',
+      missedDelivery: '35 <span class="percentage">(+5%)</span>',
   },
   overall: {
-      shipments: '2000 (+10%)',
-      outForDelivery: '500 (+1%)',
-      avgDeliveryTime: '3 HR 23 min',
-      inRoute: '700',
-      avgStopTime: '8 min 13 sec (+5%)',
-      missedDelivery: '25 (+4%)'
+      shipments: '2000 <span class="percentage">(+10%)</span>',
+      outForDelivery: '500 <span class="percentage">(+1%)</span>',
+      avgDeliveryTime: '3 HR 23 min <span class="percentage">(+1%)</span>',
+      inRoute: '700 <span class="percentage">(+12%)</span>',
+      avgStopTime: '8 min 13 sec <span class="percentage">(+6.6%)</span>',
+      missedDelivery: '25 <span class="percentage">(+4.2%)</span>',
   }
 };
 
@@ -207,10 +207,10 @@ function updateWidgetData(region) {
   const data = regionData[region] || regionData.overall;
 
   // Update the 'Shipments' widget
-  document.querySelector('.stats-pair-one .stats-widget:first-child .stats-value').textContent = data.shipments;
-  document.querySelector('.stats-pair-one .stats-widget:nth-child(2) .stats-value').textContent = data.outForDelivery;
-  document.querySelector('.stats-pair-two .stats-widget:first-child .stats-value').textContent = data.avgDeliveryTime;
-  document.querySelector('.stats-pair-two .stats-widget:nth-child(2) .stats-value').textContent = data.inRoute;
-  document.querySelector('.stats-pair-two .stats-widget:first-child .stats-value').textContent = data.avgStopTime;
-  document.querySelector('.stats-pair-two .stats-widget:nth-child(2) .stats-value').textContent = data.missedDelivery;
+  document.querySelector('.stats-pair-one .stats-widget:first-child .stats-value').innerHTML = data.shipments;
+  document.querySelector('.stats-pair-one .stats-widget:nth-child(2) .stats-value').innerHTML = data.outForDelivery;
+  document.querySelector('.stats-pair-two .stats-widget:first-child .stats-value').innerHTML = data.avgDeliveryTime;
+  document.querySelector('.stats-pair-two .stats-widget:nth-child(2) .stats-value').innerHTML = data.inRoute;
+  document.querySelector('.stats-pair-three .stats-widget:first-child .stats-value').innerHTML = data.avgStopTime;
+  document.querySelector('.stats-pair-three .stats-widget:nth-child(2) .stats-value').innerHTML = data.missedDelivery;
 }
