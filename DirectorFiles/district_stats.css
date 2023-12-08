@@ -10,6 +10,7 @@
 #page-header {
     display: flex;
     column-gap: 1.5rem;
+    font-size: 25px;
 }
 
 /* Current Stop Widget */
