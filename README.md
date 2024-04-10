@@ -21,9 +21,9 @@ This is a school project for Human-Computer Interaction(CSE 4663) at Mississippi
 - Eleftherios Vganges - Developer
 
 ### Director Dashboard
-- Azim Bazarov
-- Jennie Zheng
-- Samuel Parker
+- Azim Bazarov - Developer
+- Jennie Zheng - UI/UX Designer
+- Samuel Parker - Developer
 
 # How to run?
 1. Download the zip file by clicking on the "Code" button or through the terminal.
